@@ -1,0 +1,628 @@
+/* ═══════════════════════════════════════════════════════════════
+   ENTRY PAGES — Chapter Entry Styles
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── ORIGIN ── */
+.origin-header {
+  padding: 8px 16px;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.origin-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 3px;
+}
+
+.origin-text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  line-height: 1.5;
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* ── ENTRY HEADER ── */
+.entry-header {
+  padding: 14px 18px 12px;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.entry-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 5px;
+}
+
+.entry-title {
+  font-family: 'IM Fell English', serif;
+  font-size: 28px;
+  line-height: 1.1;
+  color: var(--ink);
+  font-weight: normal;
+}
+
+.entry-subtitle {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  font-style: italic;
+  color: var(--dark-gray);
+  margin-top: 5px;
+}
+
+/* ── IMAGE ── */
+.img-wrap {
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.img-wrap img,
+.img-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%) contrast(92%);
+}
+
+/* ── ARTIFACT CARD ── */
+.artifact-card {
+  border-bottom: 1.5px solid var(--ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ac-col {
+  padding: 10px 13px;
+  border-right: 1px solid var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ac-col:last-child {
+  border-right: none;
+}
+
+.ac-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 5px;
+  align-items: baseline;
+}
+
+.ac-key {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mid-gray);
+  padding-top: 1px;
+  line-height: 1.4;
+}
+
+.ac-val {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8.5px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.ac-val.italic {
+  font-style: italic;
+  color: var(--dark-gray);
+}
+
+.ac-val.bold {
+  font-weight: 600;
+}
+
+.ac-val.heavy {
+  font-weight: 600;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+  display: inline;
+}
+
+/* ── TIMELINE ── */
+.timeline-strip {
+  border-bottom: 1.5px solid var(--ink);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.tl-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.tl-year {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.tl-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ink);
+  margin: 4px 0;
+}
+
+.tl-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7px;
+  color: var(--dark-gray);
+  text-align: center;
+  max-width: 70px;
+  line-height: 1.35;
+}
+
+.tl-line {
+  flex: 1;
+  height: 1px;
+  background: var(--ink);
+  margin-bottom: 18px;
+}
+
+.tl-node.now .tl-dot {
+  background: none;
+  border: 1.5px solid var(--ink);
+}
+
+.tl-node.now .tl-year {
+  font-style: italic;
+  color: var(--mid-gray);
+}
+
+/* ── CONTEXT SECTION ── */
+.context-section {
+  border-bottom: 1.5px solid var(--ink);
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  flex: 1;
+}
+
+.cs-label {
+  padding: 12px;
+  border-right: 1px solid var(--light-gray);
+}
+
+.cs-label-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--mid-gray);
+  line-height: 1.6;
+}
+
+.cs-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.cs-body p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  line-height: 1.72;
+  color: var(--ink);
+}
+
+.cs-body p em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RIGHT PAGE — Entry Content
+   ═══════════════════════════════════════════════════════════════ */
+
+.right-body {
+  display: grid;
+  grid-template-columns: 1fr 148px;
+  flex: 1;
+}
+
+.body-main {
+  padding: 18px 16px;
+  border-right: 1px solid var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* THE RULE */
+.the-rule {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 13px;
+}
+
+.rule-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 7px;
+}
+
+.rule-text {
+  font-family: 'IM Fell English', serif;
+  font-size: 20px;
+  line-height: 1.25;
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* PERSONAL */
+.personal {
+  font-family: 'IM Fell English', serif;
+  font-size: 12.5px;
+  line-height: 1.72;
+  color: var(--ink);
+  font-style: italic;
+  border-left: 3px solid var(--ink);
+  padding-left: 12px;
+}
+
+/* BODY TEXT */
+.body-main p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  line-height: 1.78;
+  color: var(--ink);
+}
+
+.body-main p em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* KEY IDEA */
+.key-idea {
+  background: var(--ink);
+  padding: 11px 13px;
+}
+
+.key-idea-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 5px;
+}
+
+.key-idea p {
+  font-family: 'IM Fell English', serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--white);
+  font-style: italic;
+}
+
+/* FORWARD THREAD */
+.forward-thread {
+  border-top: 2px solid var(--ink);
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+.forward-thread p {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  line-height: 1.65;
+  color: var(--dark-gray);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.ft-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+}
+
+.ft-text {
+  font-family: 'IM Fell English', serif;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.next-node {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  border-top: 1px solid var(--light-gray);
+  padding-top: 6px;
+}
+
+.next-node span {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.next-node a {
+  color: var(--mid-gray);
+  text-decoration: none;
+}
+
+.next-node a:hover {
+  text-decoration: underline;
+}
+
+.next-node a span {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* RIGHT PAGE IMAGE */
+.right-img-wrap {
+  border: 1.5px solid var(--ink);
+}
+
+.right-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%) contrast(92%);
+}
+
+/* RIGHT ARTIFACT CARD */
+.right-artifact-wrap {
+  border: 1.5px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+}
+
+.right-artifact-wrap svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1.5px solid var(--ink);
+  background: var(--white);
+}
+
+.right-artifact-wrap .artifact-card {
+  border-bottom: none;
+}
+
+.right-artifact-card {
+  border-top: 1.5px solid var(--ink);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.rac-col {
+  padding: 8px 10px;
+  border-right: 1px solid var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rac-col:last-child {
+  border-right: none;
+}
+
+.rac-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 4px;
+  align-items: baseline;
+}
+
+.rac-key {
+  font-family: 'Space Mono', monospace;
+  font-size: 6.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mid-gray);
+  line-height: 1.4;
+}
+
+.rac-val {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.rac-val.italic {
+  font-style: italic;
+  color: var(--dark-gray);
+}
+
+.rac-val.bold {
+  font-weight: 600;
+}
+
+.rac-val.heavy {
+  font-weight: 600;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 1px;
+  display: inline;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MARGIN — Catalog Tags & Pull Quotes
+   ═══════════════════════════════════════════════════════════════ */
+
+.margin-col {
+  background: var(--margin-bg);
+  padding: 14px 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ctag {
+  padding: 8px 7px 9px;
+  border-bottom: 1px dashed var(--mid-gray);
+}
+
+.ctag:last-child {
+  border-bottom: none;
+}
+
+.ctag-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 7.5px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 1px;
+}
+
+.ctag-concept {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7px;
+  color: var(--mid-gray);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.ctag-line {
+  font-family: 'IM Fell English', serif;
+  font-size: 8.5px;
+  line-height: 1.45;
+  color: var(--dark-gray);
+  font-style: italic;
+  display: block;
+}
+
+.pull-quote {
+  background: var(--white);
+  border: 1.5px solid var(--ink);
+  padding: 10px 9px;
+  margin: 8px -9px;
+}
+
+.pq-quote {
+  font-family: 'IM Fell English', serif;
+  font-size: 10px;
+  line-height: 1.55;
+  color: var(--ink);
+  font-style: italic;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.pq-attr {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  color: var(--mid-gray);
+  display: block;
+}
+
+.pq-attr strong {
+  color: var(--ink);
+  display: block;
+  margin-bottom: 1px;
+}
+
+.index-tags {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--mid-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.index-tag-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 6.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 3px;
+}
+
+.itag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7px;
+  color: var(--dark-gray);
+  border: 1px solid var(--mid-gray);
+  padding: 2px 5px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+/* ── PATTERN BLOCK (Entry 02) ── */
+.pattern-block {
+  border: 1.5px solid var(--ink);
+  padding: 11px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.pattern-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 2px;
+}
+
+.pattern-row {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 8px;
+  align-items: start;
+}
+
+.pattern-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--ink);
+  padding-top: 1px;
+}
+
+.pattern-text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.pattern-text strong {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 1px;
+}
+
+.pattern-conclusion {
+  border-top: 1px solid var(--light-gray);
+  padding-top: 7px;
+  font-family: 'IM Fell English', serif;
+  font-size: 10.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  font-style: italic;
+}

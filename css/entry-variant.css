@@ -1,0 +1,209 @@
+/* ═══════════════════════════════════════════════════════════════
+   ENTRY VARIANTS — Styles specific to Entry 02, 03, etc.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Entry 02/03 layout tweaks (keep same artifact typography as Entry 01) */
+.right-body {
+  display: grid;
+  grid-template-columns: 1fr 148px;
+  min-height: 0;
+}
+
+/* Entry 03 specific margin styles */
+.margin-col {
+  background: var(--margin-bg);
+  padding: 14px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ctag {
+  padding: 11px 0 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.ctag:last-child {
+  border-bottom: none;
+}
+
+.ctag-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ctag-concept {
+  display: none;
+}
+
+.ctag-line {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9.5px;
+  line-height: 1.6;
+  color: #222;
+  display: block;
+}
+
+.pull-quote {
+  background: var(--white);
+  border: 1.5px solid var(--ink);
+  padding: 12px 10px;
+  margin: 10px -11px;
+}
+
+.pq-quote {
+  font-family: 'IM Fell English', serif;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink);
+  font-style: italic;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pq-attr {
+  font-family: 'Space Mono', monospace;
+  font-size: 7.5px;
+  color: var(--mid-gray);
+  display: block;
+}
+
+.pq-attr strong {
+  color: var(--ink);
+  display: block;
+  margin-bottom: 2px;
+  font-size: 8px;
+}
+
+.index-tags {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #bbb;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.index-tag-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 4px;
+}
+
+.itag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  color: var(--dark-gray);
+  border: 1px solid var(--mid-gray);
+  padding: 2px 6px;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   READER AS ARTIFACT — Special styles for Chapter 1 conclusion
+   ═══════════════════════════════════════════════════════════════ */
+
+/* The empty frame where the image should be */
+.img-wrap-empty {
+  border-bottom: 1.5px solid var(--ink);
+  background: var(--paper);
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.img-wrap-empty::before {
+  content: '';
+  position: absolute;
+  inset: 18px;
+  border: 1px dashed var(--mid-gray);
+}
+
+.empty-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+}
+
+/* Full-width artifact card for the reader — breaks the 2-col norm */
+.artifact-card-full {
+  border-bottom: 1.5px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.acf-row {
+  display: grid;
+  grid-template-columns: var(--col-key) 1fr;
+  gap: 6px;
+  align-items: baseline;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.acf-row:last-child {
+  border-bottom: none;
+}
+
+.acf-row .ac-key {
+  line-height: 1.55;
+}
+
+/* Blank fields — dashes where data should be */
+.ac-val.blank {
+  color: var(--mid-gray);
+  border-bottom: 1px dashed var(--mid-gray);
+  padding-bottom: 1px;
+  font-style: italic;
+}
+
+/* The reflection text — bigger, more air */
+.reflection {
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+.reflection p {
+  font-family: 'IM Fell English', serif;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.reflection p em {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.reflection p strong {
+  font-weight: normal;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+/* Right page — no margin column for this entry. Full width. */
+.right-body-full {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  flex: 1;
+}

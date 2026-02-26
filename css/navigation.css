@@ -1,0 +1,70 @@
+/* ═══════════════════════════════════════════════════════════════
+   NAVIGATION — Index/Home Page
+   ═══════════════════════════════════════════════════════════════ */
+
+.container {
+  max-width: 800px;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  box-shadow: 6px 6px 0 #444;
+  padding: 60px 50px;
+}
+
+.title {
+  font-family: 'IM Fell English', serif;
+  font-size: 48px;
+  line-height: 1.1;
+  color: var(--ink);
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--dark-gray);
+  margin-bottom: 20px;
+}
+
+.author {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 50px;
+}
+
+.nav-section {
+  margin-bottom: 35px;
+}
+
+.nav-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 15px;
+}
+
+.nav-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  line-height: 2;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.divider {
+  border-top: 1px solid var(--light-gray);
+  margin: 30px 0;
+}
