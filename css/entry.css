@@ -303,7 +303,7 @@
 .rule-label {
   font-family: 'Space Mono', monospace;
   font-size: 7px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--mid-gray);
   margin-bottom: calc(var(--grid-unit) * 0.75);
@@ -328,11 +328,11 @@
   padding-left: calc(var(--grid-unit) * 1.5);
 }
 
-/* BODY TEXT */
+/* BODY TEXT — unified with content.css .body-text (same typography) */
 .body-main p {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 10.5px;
-  line-height: 1.78;
+  font-size: 10px;
+  line-height: 1.8;
   color: var(--ink);
 }
 
@@ -341,7 +341,7 @@
   font-weight: 600;
 }
 
-/* KEY IDEA (index: neutral, no dark box) */
+/* KEY IDEA — unified with content.css .card--key-idea */
 .key-idea {
   background: var(--margin-bg);
   border: 1px solid var(--light-gray);
@@ -349,12 +349,12 @@
 }
 
 .key-idea-label {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Space Mono', monospace;
   font-size: 7px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--mid-gray);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .key-idea p {
@@ -363,6 +363,30 @@
   line-height: 1.5;
   color: var(--ink);
   font-style: italic;
+}
+
+/* BETTER VERSION — provocation block */
+.better-version {
+  background: var(--margin-bg);
+  border: 1px solid var(--light-gray);
+  padding: calc(var(--grid-unit) * 1) calc(var(--grid-unit) * 1.5);
+  margin-top: calc(var(--grid-unit) * 1.25);
+}
+
+.better-version-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 8px;
+}
+
+.better-version p {
+  font-family: 'IM Fell English', serif;
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--ink);
 }
 
 /* FORWARD THREAD (index: thin, calm) */
@@ -453,6 +477,31 @@
   background: var(--white);
 }
 
+.right-artifact-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.credit-img-wrap {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--light-gray);
+  width: 100%;
+  aspect-ratio: 5 / 3;
+}
+
+.credit-img-wrap .credit-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: rotate(-90deg);
+  transform-origin: center center;
+}
+
 .right-artifact-wrap .artifact-card {
   border-bottom: none;
 }
@@ -541,7 +590,7 @@
 .see-also-label {
   font-family: 'Space Mono', monospace;
   font-size: 7px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--mid-gray);
   margin: 0 0 6px 0;
@@ -549,6 +598,24 @@
 
 .see-also-label {
   margin-bottom: 4px;
+}
+
+.keywords-glossary-prompt {
+  margin-bottom: 8px;
+}
+
+.keywords-glossary-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.keywords-glossary-link:hover {
+  text-decoration-thickness: 2px;
 }
 
 .keywords-list {
@@ -562,6 +629,88 @@
   font-size: 8px;
   color: var(--dark-gray);
   padding: 2px 0;
+}
+
+.keyword-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.keyword-link:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Sources — key research backing each entry */
+.sources-block {
+  border-top: 1px solid var(--light-gray);
+  padding-top: calc(var(--grid-unit) * 1);
+}
+
+.sources-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin: 0 0 6px 0;
+}
+
+.sources-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px 0;
+}
+
+.sources-item {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  color: var(--dark-gray);
+  line-height: 1.5;
+  padding: 2px 0;
+}
+
+.sources-link {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.sources-link:hover {
+  text-decoration: underline;
+}
+
+.sources-note {
+  color: var(--mid-gray);
+  font-style: italic;
+}
+
+.sources-more {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sources-more:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Sources in main content (Reader as Artifact) */
+.right-body-full .sources-block {
+  margin-top: 24px;
+  padding-top: 16px;
+}
+
+.right-body-full .sources-label {
+  font-size: 8px;
+  margin-bottom: 8px;
+}
+
+.right-body-full .sources-item {
+  font-size: 9px;
 }
 
 .see-also-block {
@@ -624,35 +773,7 @@
   display: block;
 }
 
-.pull-quote {
-  background: var(--white);
-  border: 1px solid var(--light-gray);
-  padding: calc(var(--grid-unit) * 1) calc(var(--grid-unit) * 1.25);
-  margin: calc(var(--grid-unit) * 1) 0;
-}
-
-.pq-quote {
-  font-family: 'IM Fell English', serif;
-  font-size: 10px;
-  line-height: 1.55;
-  color: var(--ink);
-  font-style: italic;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.pq-attr {
-  font-family: 'Space Mono', monospace;
-  font-size: 7px;
-  color: var(--mid-gray);
-  display: block;
-}
-
-.pq-attr strong {
-  color: var(--ink);
-  display: block;
-  margin-bottom: 1px;
-}
+/* pull-quote: base in content.css; .margin-col .pull-quote variant for sidebar */
 
 .index-tags {
   margin-top: auto;

@@ -1,0 +1,184 @@
+/* ═══════════════════════════════════════════════════════════════
+   INDEX OF SYSTEMS — Mindy Seu–inspired aesthetic
+   Rhizomatic, interconnected, living archive — entries as hyperlinks
+   ═══════════════════════════════════════════════════════════════ */
+
+.spread--index-of-systems .page-content {
+  padding: calc(var(--grid-unit) * 2.5) calc(var(--grid-unit) * 3);
+}
+
+/* ── HEADER: Softer, less catalog-like ── */
+.idx-header {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.idx-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.idx-intro,
+.idx-note {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.idx-note {
+  color: var(--dark-gray);
+  font-size: 8.5px;
+}
+
+/* ── SECTIONS: Thematic clusters, less rigid ── */
+.idx-section {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.idx-section:first-of-type {
+  margin-top: 0;
+}
+
+.idx-section-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dark-gray);
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+}
+
+/* ── ENTRIES: Index-card feel, hyperlink-forward ── */
+.idx-systems-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.idx-system-entry {
+  padding: 12px 0;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.idx-system-entry:last-child {
+  border-bottom: none;
+}
+
+/* System name as primary hyperlink — very Seu */
+.idx-system-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.idx-system-name:hover {
+  border-bottom-color: var(--ink);
+  color: var(--ink);
+}
+
+.idx-system-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark-gray);
+  margin-bottom: 6px;
+}
+
+.idx-system-desc {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8.5px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.idx-system-example {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7.5px;
+  line-height: 1.55;
+  color: var(--dark-gray);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.idx-system-example-label {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ── HOW TO USE: Invitational, living archive ── */
+.idx-how-to-use {
+  margin-top: 24px;
+  padding: 14px 16px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+}
+
+.idx-how-to-use-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.idx-how-to-use-text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+/* ── IMAGE PLACEHOLDERS ── */
+.idx-image-placeholder {
+  aspect-ratio: 4 / 3;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.idx-image-placeholder-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  color: var(--mid-gray);
+}
+
+.idx-image-placeholder--small {
+  aspect-ratio: 1;
+  max-width: 120px;
+  margin-top: 16px;
+}
+
+.idx-image-placeholder--wide {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+}

@@ -1,64 +1,42 @@
+import Link from "next/link";
+
 export default function HomePage() {
   return (
-    <main className="spread">
-      <div className="page-left">
-        <div className="top-strip">
-          <span>They Did Not Make This For You</span>
-          <span>Digital Edition</span>
-        </div>
-        <div className="origin-header">
-          <div className="origin-label">Start</div>
-          <div className="origin-text">
-            Begin with Chapter 1 — Who Was This Built For?
+    <div className="cover-container">
+      <div className="cover">
+        <div className="cover-grid" aria-hidden="true" />
+        <div className="cover-content">
+          <div className="cover-title">
+            <h1 className="title-main">
+              They Did Not
+              <br />
+              Make This
+              <br />
+              For You
+            </h1>
+            <p className="title-subtitle">
+              A Catalog of Systems We Live Inside
+            </p>
+          </div>
+          <div className="cover-author">Candace Stewart</div>
+          <div className="cover-entry">
+            <Link href="/frontmatter/preface" className="cover-link">
+              Begin Reading →
+            </Link>
+            <Link
+              href="/frontmatter/how-to-read"
+              className="cover-link cover-link--secondary"
+            >
+              How to Read This Catalog
+            </Link>
           </div>
         </div>
-        <div className="entry-header">
-          <div className="entry-eyebrow">Enter</div>
-          <div className="entry-title">They Did Not Make This For You</div>
-          <div className="entry-subtitle">
-            A digital book about systems that were not built with you in mind.
-          </div>
-        </div>
-        <div className="page-footer">
-          <span>They Did Not Make This For You — Candace Stewart, 2026</span>
-          <span>continued →</span>
+        <div className="cover-meta">
+          <span className="meta-item">2026</span>
+          <span className="meta-item">6 Chapters</span>
+          <span className="meta-item">18 Entries · First Edition</span>
         </div>
       </div>
-      <div className="page-right">
-        <div className="top-strip">
-          <span>Navigate</span>
-          <span>Next</span>
-        </div>
-        <div className="right-body-full">
-          <div className="the-rule">
-            <div className="rule-label">How to read</div>
-            <div className="rule-text">
-              Choose any entry, but know that every system here connects to the
-              others.
-            </div>
-          </div>
-          <div className="forward-thread">
-            <div className="ft-label">First stop</div>
-            <div className="ft-text">
-              Start with Chapter 1 — Reader as Artifact to see yourself as part
-              of the archive.
-            </div>
-          </div>
-        </div>
-        <div className="nav-footer">
-          <span>
-            <a href="/chapter-01/ch1-reader-as-artifact">→ Reader as Artifact</a>
-          </span>
-          <span className="tags">
-            Home ·{" "}
-            <a href="/pages/frontmatter/table-of-contents.html" className="contents-link">
-              Contents
-            </a>
-          </span>
-          <span />
-        </div>
-      </div>
-    </main>
+    </div>
   );
 }
-

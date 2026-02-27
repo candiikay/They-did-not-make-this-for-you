@@ -1,22 +1,17 @@
 import Link from "next/link";
+import { EntrySources } from "@/app/components/EntrySources";
 import {
   NavFooter,
-  PageFooter,
   PageLeft,
   PageRight,
-  Spread,
-  TopStrip
+  Spread
 } from "@/app/components/Spread";
+import { ENTRY_SOURCES } from "@/app/lib/entry-sources";
 
 export default function ReaderAsArtifactPage() {
   return (
-    <Spread>
+    <Spread className="spread--continuous">
       <PageLeft>
-        <TopStrip
-          left="Chapter 1 — Who Was This Built For?"
-          right="Discretion"
-        />
-
         <div className="origin-header">
           <div className="origin-label">Origin</div>
           <div className="origin-text">You are already in the archive.</div>
@@ -138,16 +133,9 @@ export default function ReaderAsArtifactPage() {
             <span className="tl-label">reading this</span>
           </div>
         </div>
-
-        <PageFooter
-          left="They Did Not Make This For You — Candace Stewart, 2026"
-          right="continued →"
-        />
       </PageLeft>
 
       <PageRight>
-        <TopStrip left="Discretion — Reader as Artifact" right="p. 2 / 2" />
-
         <div className="right-body-full">
           <div className="the-rule">
             <div className="rule-label">The Rule</div>
@@ -223,6 +211,8 @@ export default function ReaderAsArtifactPage() {
               between institutions, and what happens when it merges.
             </div>
           </div>
+
+          <EntrySources sources={ENTRY_SOURCES["ch1-reader-as-artifact"]} />
         </div>
 
         <NavFooter
@@ -240,8 +230,8 @@ export default function ReaderAsArtifactPage() {
             </>
           }
           right={
-            <Link href="/chapter-02/ch2-entry04-location-tracking">
-              Next → Chapter 2 — How the Pipes Connect
+            <Link href="/chapter-01/recommended-reading">
+              Next → Recommended Reading — Chapter 1
             </Link>
           }
         />

@@ -1,7 +1,17 @@
 import { ReactNode } from "react";
 
-export function Spread({ children }: { children: ReactNode }) {
-  return <div className="spread">{children}</div>;
+export function Spread({
+  children,
+  className
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <div className={className ? `spread ${className}` : "spread"}>
+      {children}
+    </div>
+  );
 }
 
 export function PageLeft({ children }: { children: ReactNode }) {

@@ -1,0 +1,235 @@
+/* ═══════════════════════════════════════════════════════════════
+   UNIFIED CONTENT DESIGN SYSTEM
+   Shared tokens and components for frontmatter + entries.
+   Aligns zine-card/key-idea, body-text/body-main, pull-quote variants.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── TYPOGRAPHY TOKENS ── */
+/* block-label: section labels, card labels, key-idea labels, rule labels */
+.block-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* body-text: prose everywhere — frontmatter and entry main content */
+.body-text {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.body-text p {
+  margin-bottom: 18px;
+}
+
+.body-text p:last-child {
+  margin-bottom: 0;
+}
+
+.body-text em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.body-text strong {
+  font-weight: 600;
+}
+
+/* Tighter spacing when inside page-content (e.g. introduction) */
+.page-content .body-text p {
+  margin-bottom: 16px;
+}
+
+.page-content .body-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── CARD (unified: zine-card + key-idea) ── */
+.card {
+  padding: 18px 22px;
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card .label,
+.card .block-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+}
+
+.card .content {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  line-height: 1.7;
+  color: var(--ink);
+  position: relative;
+  z-index: 1;
+}
+
+.card .content p {
+  margin-bottom: 12px;
+}
+
+.card .content p:last-child {
+  margin-bottom: 0;
+}
+
+.card .content .list {
+  margin-left: 0;
+  list-style: none;
+}
+
+/* card--zine: frontmatter style — white, border, tilt, shadow */
+.card--zine {
+  background: var(--white);
+  border: 1.5px solid var(--ink);
+  transform: rotate(0.4deg);
+  box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.12),
+              6px 8px 0 rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card--zine:nth-child(even) {
+  transform: rotate(-0.3deg);
+}
+
+.card--zine:hover {
+  transform: rotate(0deg) translateY(-1px);
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.12),
+              8px 10px 0 rgba(0, 0, 0, 0.04);
+}
+
+.card--zine::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.01) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.01) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.card--zine-tilt-left {
+  transform: rotate(-0.5deg);
+}
+
+.card--zine-tilt-right {
+  transform: rotate(0.5deg);
+}
+
+/* card--key-idea: entry style — neutral, flat, no tilt */
+.card--key-idea {
+  background: var(--margin-bg);
+  border: 1px solid var(--light-gray);
+  padding: calc(var(--grid-unit) * 1) calc(var(--grid-unit) * 1.5);
+}
+
+.card--key-idea .content,
+.card--key-idea p {
+  font-family: 'IM Fell English', serif;
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* ── PULL QUOTE (unified) ── */
+/* Standalone: <p className="pull-quote">...</p> — frontmatter, inline in prose */
+.pull-quote {
+  font-family: 'IM Fell English', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  font-style: italic;
+  border-left: 3px solid var(--ink);
+  padding-left: 20px;
+  margin: 25px 0;
+  position: relative;
+  transform: rotate(0.2deg);
+  padding-right: 10px;
+}
+
+.pull-quote::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 15px;
+  width: 40px;
+  height: 2px;
+  background: var(--ink);
+  opacity: 0.3;
+  transform: rotate(-2deg);
+}
+
+/* Attributed variant: has .pq-quote child (entry) or inside .margin-col */
+.pull-quote:has(.pq-quote),
+.margin-col .pull-quote {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-left: 3px solid var(--ink);
+  padding: calc(var(--grid-unit) * 1) calc(var(--grid-unit) * 1.25);
+  margin: calc(var(--grid-unit) * 1) 0;
+  font-size: inherit;
+}
+
+.pull-quote:has(.pq-quote)::after,
+.margin-col .pull-quote::after {
+  display: none;
+}
+
+.pq-quote {
+  font-family: 'IM Fell English', serif;
+  font-size: 10px;
+  line-height: 1.55;
+  color: var(--ink);
+  font-style: italic;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.pq-attr {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  color: var(--mid-gray);
+  display: block;
+}
+
+.pq-attr strong {
+  color: var(--ink);
+  display: block;
+  margin-bottom: 1px;
+}
+
+/* ── LISTS (shared) ── */
+.list {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  line-height: 1.85;
+  color: var(--ink);
+  margin-left: 20px;
+  margin-bottom: 18px;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+.list li:last-child {
+  margin-bottom: 0;
+}

@@ -24,6 +24,8 @@
   margin-bottom: 0;
 }
 
+/* body-text, .list, .pull-quote, .card defined in content.css */
+
 /* ── BOOK TITLE (Preface) ── */
 .book-title {
   font-family: 'IM Fell English', serif;
@@ -51,11 +53,11 @@
   margin-bottom: 50px;
 }
 
-/* ── SECTION LABELS ── */
+/* ── SECTION LABELS — aligned with content.css .block-label ── */
 .section-label {
   font-family: 'Space Mono', monospace;
-  font-size: 8px;
-  letter-spacing: 0.25em;
+  font-size: 7px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--mid-gray);
   margin-bottom: 12px;
@@ -84,49 +86,6 @@
   margin-bottom: 30px;
   position: relative;
   transform: rotate(-0.1deg);
-}
-
-/* ── BODY TEXT ── */
-.body-text {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  line-height: 1.85;
-  color: var(--ink);
-}
-
-.body-text p {
-  margin-bottom: 18px;
-}
-
-.body-text p:last-child {
-  margin-bottom: 0;
-}
-
-.body-text em {
-  font-style: italic;
-  font-weight: 600;
-}
-
-.body-text strong {
-  font-weight: 600;
-}
-
-/* ── LISTS ── */
-.list {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  line-height: 1.85;
-  color: var(--ink);
-  margin-left: 20px;
-  margin-bottom: 18px;
-}
-
-.list li {
-  margin-bottom: 10px;
-}
-
-.list li:last-child {
-  margin-bottom: 0;
 }
 
 /* ── HIGHLIGHT BOXES ── */
@@ -187,31 +146,7 @@
   z-index: 1;
 }
 
-.pull-quote {
-  font-family: 'IM Fell English', serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--ink);
-  font-style: italic;
-  border-left: 3px solid var(--ink);
-  padding-left: 20px;
-  margin: 25px 0;
-  position: relative;
-  transform: rotate(0.2deg);
-  padding-right: 10px;
-}
-
-.pull-quote::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  right: 15px;
-  width: 40px;
-  height: 2px;
-  background: var(--ink);
-  opacity: 0.3;
-  transform: rotate(-2deg);
-}
+/* pull-quote defined in content.css */
 
 /* ── TABLE OF CONTENTS ── */
 .toc-title {
@@ -301,50 +236,36 @@
   letter-spacing: 0.3em;
 }
 
-/* ── ZINE EFFECT CARDS ── */
-.zine-card {
+/* zine-card: unified card style for frontmatter (matches content.css card--zine) */
+.zine-card,
+.zine-card-tilt-left,
+.zine-card-tilt-right {
   background: var(--white);
   border: 1.5px solid var(--ink);
   padding: 18px 22px;
   margin: 20px 0;
   position: relative;
-  transform: rotate(0.4deg);
   box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.12),
               6px 8px 0 rgba(0, 0, 0, 0.04);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
-
-.zine-card:nth-child(even) {
-  transform: rotate(-0.3deg);
-}
-
+.zine-card { transform: rotate(0.4deg); }
+.zine-card:nth-child(even) { transform: rotate(-0.3deg); }
 .zine-card:hover {
   transform: rotate(0deg) translateY(-1px);
   box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.12),
               8px 10px 0 rgba(0, 0, 0, 0.04);
 }
-
 .zine-card::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  right: -1px;
-  bottom: -1px;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.01) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.01) 0%, transparent 50%);
+  top: -1px; left: -1px; right: -1px; bottom: -1px;
+  background: radial-gradient(circle at 20% 30%, rgba(0,0,0,0.01) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(0,0,0,0.01) 0%, transparent 50%);
   pointer-events: none;
 }
-
-.zine-card-tilt-left {
-  transform: rotate(-0.5deg);
-}
-
-.zine-card-tilt-right {
-  transform: rotate(0.5deg);
-}
-
+.zine-card-tilt-left { transform: rotate(-0.5deg); }
+.zine-card-tilt-right { transform: rotate(0.5deg); }
 .zine-card .label {
   font-family: 'Space Mono', monospace;
   font-size: 7px;
@@ -352,31 +273,18 @@
   text-transform: uppercase;
   color: var(--mid-gray);
   margin-bottom: 10px;
-  position: relative;
   z-index: 1;
 }
-
 .zine-card .content {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 9px;
   line-height: 1.7;
   color: var(--ink);
-  position: relative;
   z-index: 1;
 }
-
-.zine-card .content p {
-  margin-bottom: 12px;
-}
-
-.zine-card .content p:last-child {
-  margin-bottom: 0;
-}
-
-.zine-card .content .list {
-  margin-left: 0;
-  list-style: none;
-}
+.zine-card .content p { margin-bottom: 12px; }
+.zine-card .content p:last-child { margin-bottom: 0; }
+.zine-card .content .list { margin-left: 0; list-style: none; }
 
 /* Info card variant */
 .info-card {

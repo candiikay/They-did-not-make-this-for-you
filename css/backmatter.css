@@ -1,0 +1,238 @@
+/* ═══════════════════════════════════════════════════════════════
+   BACK MATTER — Glossary, Index of Systems, Recommended Reading
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── GLOSSARY ── */
+.glossary-framing {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+
+.glossary-how-to-use {
+  margin-bottom: 28px;
+}
+
+.glossary-group {
+  margin-bottom: 28px;
+}
+
+.glossary-group-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.glossary-entry {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--light-gray);
+  scroll-margin-top: 24px;
+}
+
+.glossary-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.glossary-term {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.glossary-def {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.glossary-when,
+.glossary-who,
+.glossary-connects {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  margin-bottom: 6px;
+}
+
+.glossary-meta-label {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.glossary-entry-links {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  margin-top: 10px;
+}
+
+.glossary-entry-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.glossary-entry-link:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* ── INDEX OF SYSTEMS ── */
+.systems-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.system-entry {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.system-entry:last-child {
+  border-bottom: none;
+}
+
+.system-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.system-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 10px;
+}
+
+.system-desc {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.system-example {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.system-example-label {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.system-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.system-link:hover {
+  text-decoration: underline;
+}
+
+/* ── RECOMMENDED READING ── */
+.readings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.reading-entry {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.reading-entry:last-child {
+  border-bottom: none;
+}
+
+.reading-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.reading-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  margin-bottom: 10px;
+}
+
+.reading-desc {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.reading-why {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.reading-why-label {
+  font-weight: 600;
+}
+
+.reading-example {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  line-height: 1.6;
+  color: var(--dark-gray);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.reading-example-label {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.reading-connects {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.05em;
+  color: var(--mid-gray);
+}
