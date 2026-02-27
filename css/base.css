@@ -1,8 +1,7 @@
 /* ═══════════════════════════════════════════════════════════════
    BASE STYLES — Variables, Reset, Typography
+   Fonts loaded via <link> in HTML with preconnect + display=swap
    ═══════════════════════════════════════════════════════════════ */
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=IM+Fell+English:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
   --white: #ffffff;
@@ -12,13 +11,14 @@
   --dark-gray: #555;
   --ink: #111;
   --margin-bg: #e8e8e8;
-  /* Entry variant layout + font tokens (used by Entry 02/03) */
+  /* Index layout: tight grid, aligned blocks */
+  --grid-unit: 8px;
+  /* Entry variant layout + font tokens */
   --cell-pad: 10px 13px;
   --row-gap: 6px;
   --col-key: 72px;
   --key-font: 7px;
   --card-font: 8.5px;
-  /* Unified page width for all interior spreads */
   --page-width: 1300px;
 }
 
@@ -39,6 +39,7 @@ body {
   min-height: 100vh;
 }
 
+/* Index proportion: left = artifact (70%), right = metadata (30%) */
 .spread {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -55,9 +56,8 @@ body {
       rgba(0, 0, 0, 0.008) 20px
     ),
     radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.01) 0%, transparent 100%);
-  border: 1.5px solid var(--ink);
-  box-shadow: 6px 6px 0 #444, 
-              12px 12px 0 rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--mid-gray);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.06);
   position: relative;
 }
 
@@ -75,7 +75,7 @@ body {
 }
 
 .page-left {
-  border-right: 2px solid var(--ink);
+  border-right: 1px solid var(--light-gray);
   display: flex;
   flex-direction: column;
 }
@@ -85,30 +85,31 @@ body {
   flex-direction: column;
 }
 
-/* ── TOP STRIP ── */
+/* ── TOP STRIP (index: calm, neutral — no dark boxes) ── */
 .top-strip {
-  background: var(--ink);
-  padding: 7px 16px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--light-gray);
+  padding: calc(var(--grid-unit) * 1) calc(var(--grid-unit) * 2);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .top-strip span {
-  font-family: 'Space Mono', monospace;
-  font-size: 9px;
-  letter-spacing: 0.18em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--dark-gray);
 }
 
 /* ── FOOTERS ── */
 .page-footer {
-  border-top: 1.5px solid var(--ink);
-  padding: 6px 16px;
+  border-top: 1px solid var(--light-gray);
+  padding: calc(var(--grid-unit) * 1) calc(var(--grid-unit) * 2);
   display: flex;
   justify-content: space-between;
-  background: var(--light-gray);
+  background: var(--paper);
   margin-top: auto;
 }
 
@@ -119,22 +120,22 @@ body {
 }
 
 .nav-footer {
-  border-top: 1.5px solid var(--ink);
-  padding: 6px 16px;
-  background: var(--ink);
+  border-top: 1px solid var(--light-gray);
+  padding: calc(var(--grid-unit) * 1) calc(var(--grid-unit) * 2);
+  background: var(--paper);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .nav-footer span {
-  font-family: 'Space Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 7.5px;
-  color: var(--white);
+  color: var(--dark-gray);
 }
 
 .nav-footer a {
-  color: var(--white);
+  color: var(--ink);
   text-decoration: none;
 }
 
@@ -163,5 +164,66 @@ body {
 .nav-footer .contents-link:hover {
   opacity: 1;
   text-decoration: underline;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE-FRIENDLY — Stack spread, reduce padding, readable on small screens
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  body {
+    padding: 12px 10px;
+  }
+
+  .spread {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .page-left {
+    border-right: none;
+    border-bottom: 1px solid var(--light-gray);
+  }
+
+  .top-strip {
+    padding: 6px 10px;
+  }
+
+  .top-strip span {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  .page-footer,
+  .nav-footer {
+    padding: 6px 10px;
+  }
+
+  .nav-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-footer span {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 8px 6px;
+  }
+
+  .top-strip {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .nav-footer {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
 }
 
