@@ -78,9 +78,9 @@ export default function TableOfContentsPage() {
 
           <div className="toc-section">
             <div className="toc-chapter">Chapter 3 — What Does It Decide?</div>
-            <div className="toc-entry">Entry 07 — Recommendation Systems</div>
-            <div className="toc-entry">Entry 08 — Search Rankings</div>
-            <div className="toc-entry">Entry 09 — Predictive Scoring</div>
+            <div className="toc-entry">Entry 08 — Recommendation Systems</div>
+            <div className="toc-entry">Entry 09 — Search Rankings</div>
+            <div className="toc-entry">Entry 10 — Predictive Scoring</div>
             <div className="toc-digression">Digression — When Algorithms Learn Taste</div>
           </div>
         </div>
@@ -90,9 +90,9 @@ export default function TableOfContentsPage() {
         <div className="page-content">
           <div className="toc-section">
             <div className="toc-chapter">Chapter 4 — How Did We Get Here?</div>
-            <div className="toc-entry">Entry 10 — Large Language Models</div>
-            <div className="toc-entry">Entry 11 — AI Robotics</div>
-            <div className="toc-entry">Entry 12 — AR/VR Systems</div>
+            <div className="toc-entry">Entry 11 — Large Language Models</div>
+            <div className="toc-entry">Entry 12 — AI Robotics</div>
+            <div className="toc-entry">Entry 13 — AR/VR Systems</div>
             <div className="toc-digression">Digression — Every Technology Has a Past</div>
           </div>
 
@@ -100,17 +100,17 @@ export default function TableOfContentsPage() {
             <div className="toc-chapter">
               Chapter 5 — What Does It Cost To Stay Inside The System?
             </div>
-            <div className="toc-entry">Entry 13 — Constant Updates</div>
-            <div className="toc-entry">Entry 14 — Subscription Creep</div>
-            <div className="toc-entry">Entry 15 — Repair Restrictions</div>
+            <div className="toc-entry">Entry 14 — Constant Updates</div>
+            <div className="toc-entry">Entry 15 — Subscription Creep</div>
+            <div className="toc-entry">Entry 16 — Repair Restrictions</div>
             <div className="toc-digression">Digression — The Cost of Staying Compatible</div>
           </div>
 
           <div className="toc-section">
             <div className="toc-chapter">Chapter 6 — What Could It Become?</div>
-            <div className="toc-entry">Entry 16 — Cooperative Platforms</div>
-            <div className="toc-entry">Entry 17 — Humane Tech Design</div>
-            <div className="toc-entry">Entry 18 — Community Infrastructure</div>
+            <div className="toc-entry">Entry 17 — Cooperative Platforms</div>
+            <div className="toc-entry">Entry 18 — Humane Tech Design</div>
+            <div className="toc-entry">Entry 19 — Community Infrastructure</div>
             <div className="toc-digression">Digression — Designing With Care</div>
           </div>
 

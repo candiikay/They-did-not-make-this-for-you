@@ -1,11 +1,5 @@
 import Link from "next/link";
-
-export type EntrySource = {
-  title: string;
-  author: string;
-  year: string;
-  note?: string;
-};
+import type { EntrySource } from "@/app/lib/entry-sources";
 
 export function EntrySources({ sources }: { sources: EntrySource[] }) {
   if (!sources?.length) return null;

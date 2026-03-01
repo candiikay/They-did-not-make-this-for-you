@@ -34,7 +34,7 @@ export default function HomePage() {
         <div className="cover-meta">
           <span className="meta-item">2026</span>
           <span className="meta-item">6 Chapters</span>
-          <span className="meta-item">18 Entries · First Edition</span>
+          <span className="meta-item">19 Entries · First Edition</span>
         </div>
       </div>
     </div>

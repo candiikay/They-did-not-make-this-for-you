@@ -41,7 +41,7 @@ export default function Entry01Page() {
 
         <figure className="img-wrap">
           <img
-            src="/images/Bertrillon.jpg"
+            src="/images/Bertillon.jpg"
             alt="Bertillon anthropometric measurement system"
           />
           <figcaption className="img-wrap-caption">

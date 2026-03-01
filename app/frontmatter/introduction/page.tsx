@@ -182,7 +182,7 @@ export default function IntroductionPage() {
 
           <div className="body-text">
             <p>
-              This first edition gathers eighteen entries — enough to live with
+              This first edition gathers nineteen entries — enough to live with
               over a semester, to annotate, argue with, and extend. Future
               versions may add new systems, new voices, and new forms of
               evidence. The work is indebted to feminist thinkers, organizers,
