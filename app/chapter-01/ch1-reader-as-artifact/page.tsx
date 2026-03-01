@@ -8,6 +8,11 @@ import {
 } from "@/app/components/Spread";
 import { ENTRY_SOURCES } from "@/app/lib/entry-sources";
 
+export const metadata = {
+  title: "Digression — Reader as Artifact — They Did Not Make This For You",
+  description: "They Did Not Make This For You — Reader as Artifact"
+};
+
 export default function ReaderAsArtifactPage() {
   return (
     <Spread className="spread--continuous">

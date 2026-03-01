@@ -252,8 +252,8 @@ export default function Ch2Entry04Page() {
 
         <nav className="nav-footer" aria-label="Entry navigation">
           <span>
-            <Link href="/chapter-01/ch1-reader-as-artifact">
-              ← Previous Reader as Artifact
+            <Link href="/chapter-01/recommended-reading">
+              ← Previous Recommended Reading — Chapter 1
             </Link>
           </span>
           <span className="tags">

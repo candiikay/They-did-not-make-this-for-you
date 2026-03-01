@@ -229,8 +229,8 @@ export default function GlossaryPage() {
                   id={term.slug}
                   className="glossary-entry"
                 >
-                  <dt className="glossary-term">{term.term}</dt>
-                  <dd className="glossary-def">{term.definition}</dd>
+                  <div className="glossary-term">{term.term}</div>
+                  <div className="glossary-def">{term.definition}</div>
                   <div className="glossary-when">
                     <span className="glossary-meta-label">When you see:</span>{" "}
                     {term.whenYouSee}
@@ -275,8 +275,8 @@ export default function GlossaryPage() {
                   id={term.slug}
                   className="glossary-entry"
                 >
-                  <dt className="glossary-term">{term.term}</dt>
-                  <dd className="glossary-def">{term.definition}</dd>
+                  <div className="glossary-term">{term.term}</div>
+                  <div className="glossary-def">{term.definition}</div>
                   <div className="glossary-when">
                     <span className="glossary-meta-label">When you see:</span>{" "}
                     {term.whenYouSee}

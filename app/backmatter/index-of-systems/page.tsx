@@ -459,15 +459,9 @@ function groupBySection(systems: System[]) {
   return Object.fromEntries(ordered);
 }
 
-function SystemEntry({
-  sys,
-  catalogNum
-}: {
-  sys: System;
-  catalogNum: number;
-}) {
+function SystemEntry({ sys }: { sys: System }) {
   return (
-    <div key={sys.name} className="idx-system-entry">
+    <div className="idx-system-entry">
       <Link href={sys.entry} className="idx-system-name">
         {sys.name}
       </Link>
@@ -487,9 +481,6 @@ export default function IndexOfSystemsPage() {
   const sections = Object.keys(grouped);
   const leftSections = sections.slice(0, Math.ceil(sections.length / 2));
   const rightSections = sections.slice(Math.ceil(sections.length / 2));
-
-  let catalogNum = 0;
-  const getNextNum = () => ++catalogNum;
 
   return (
     <Spread className="spread--continuous spread--index-of-systems">
@@ -521,11 +512,7 @@ export default function IndexOfSystemsPage() {
               <div className="idx-section-title">{section}</div>
               <div className="idx-systems-list">
                 {grouped[section].map((sys) => (
-                  <SystemEntry
-                    key={sys.name}
-                    sys={sys}
-                    catalogNum={getNextNum()}
-                  />
+                  <SystemEntry key={sys.name} sys={sys} />
                 ))}
               </div>
             </div>
@@ -546,11 +533,7 @@ export default function IndexOfSystemsPage() {
               <div className="idx-section-title">{section}</div>
               <div className="idx-systems-list">
                 {grouped[section].map((sys) => (
-                  <SystemEntry
-                    key={sys.name}
-                    sys={sys}
-                    catalogNum={getNextNum()}
-                  />
+                  <SystemEntry key={sys.name} sys={sys} />
                 ))}
               </div>
             </div>
