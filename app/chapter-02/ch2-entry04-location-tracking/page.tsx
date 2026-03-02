@@ -11,7 +11,7 @@ export const metadata = {
 export default function Ch2Entry04Page() {
   return (
     <main
-      className="spread spread--continuous"
+      className="spread spread--continuous spread--entry-style"
       aria-label="Entry 05 — Location Tracking"
     >
       <section className="page-left" aria-label="Historical artifact and context">
@@ -42,9 +42,10 @@ export default function Ch2Entry04Page() {
         </header>
 
         <figure className="img-wrap-empty">
-          <span className="empty-label">
+          <div className="img-wrap-empty__frame" aria-hidden="true" />
+          <figcaption className="img-wrap-empty__caption">
             [ image coming — location tracking systems ]
-          </span>
+          </figcaption>
         </figure>
 
         <div className="artifact-card">
@@ -243,7 +244,7 @@ export default function Ch2Entry04Page() {
                 </Link>
                 <br />
                 <Link href="/chapter-01/ch1-reader-as-artifact">
-                  Reader as Artifact
+                  Digression
                 </Link>
               </div>
             </section>
@@ -252,8 +253,8 @@ export default function Ch2Entry04Page() {
 
         <nav className="nav-footer" aria-label="Entry navigation">
           <span>
-            <Link href="/chapter-01/recommended-reading">
-              ← Previous Recommended Reading — Chapter 1
+            <Link href="/chapter-01/ch1-reader-as-artifact">
+              ← Previous Digression
             </Link>
           </span>
           <span className="tags">

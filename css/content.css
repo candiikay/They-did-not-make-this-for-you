@@ -233,3 +233,59 @@
 .list li:last-child {
   margin-bottom: 0;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE — Readable text, tappable cards, scaled pull-quotes
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .body-text {
+    font-size: 11px;
+    line-height: 1.75;
+  }
+
+  .body-text p {
+    margin-bottom: 16px;
+  }
+
+  .pull-quote {
+    font-size: 14px;
+    padding-left: 16px;
+    margin: 20px 0;
+  }
+
+  .card {
+    padding: 14px 16px;
+    margin: 16px 0;
+  }
+
+  .card .content {
+    font-size: 10px;
+  }
+
+  .list {
+    font-size: 11px;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .body-text {
+    font-size: 12px;
+  }
+
+  .pull-quote {
+    font-size: 15px;
+    padding-left: 12px;
+    margin: 18px 0;
+  }
+
+  .card {
+    padding: 12px 14px;
+    margin: 14px 0;
+  }
+
+  .list {
+    margin-left: 12px;
+  }
+}

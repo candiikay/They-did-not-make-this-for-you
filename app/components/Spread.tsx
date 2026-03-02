@@ -62,11 +62,11 @@ export function NavFooter({
   right: ReactNode;
 }) {
   return (
-    <div className="nav-footer">
+    <nav className="nav-footer" aria-label="Page navigation">
       <span>{left}</span>
       <span className="tags">{center}</span>
       <span>{right}</span>
-    </div>
+    </nav>
   );
 }
 

@@ -11,6 +11,8 @@ export const metadata = {
   description: "Glossary — They Did Not Make This For You"
 };
 
+const COMING_SOON_ENTRIES = new Set(["05"]);
+
 const ENTRY_LINKS: Record<string, { href: string; label: string }> = {
   "01": { href: "/chapter-01/ch1-entry01-body-as-dataset", label: "Entry 01" },
   "02": { href: "/chapter-01/ch1-entry02-mind-as-dataset", label: "Entry 02" },
@@ -184,10 +186,13 @@ const GLOSSARY_GROUPS = [
 
 export default function GlossaryPage() {
   return (
-    <Spread className="spread--continuous glossary">
+    <Spread className="spread--continuous spread--entry-style glossary">
       <PageLeft>
         <div className="page-content">
-          <div className="section-title">Glossary</div>
+          <div className="glossary-header">
+            <div className="section-title">Glossary</div>
+            <div className="glossary-date">March 2025</div>
+          </div>
 
           <div className="glossary-framing">
             <p>
@@ -248,12 +253,18 @@ export default function GlossaryPage() {
                     {term.entryRefs.map((num, i) => (
                       <span key={num}>
                         {i > 0 && ", "}
-                        <Link
-                          href={ENTRY_LINKS[num].href}
-                          className="glossary-entry-link"
-                        >
-                          {ENTRY_LINKS[num].label}
-                        </Link>
+                        {COMING_SOON_ENTRIES.has(num) ? (
+                          <span className="glossary-entry-coming">
+                            {ENTRY_LINKS[num].label} (coming soon)
+                          </span>
+                        ) : (
+                          <Link
+                            href={ENTRY_LINKS[num].href}
+                            className="glossary-entry-link"
+                          >
+                            {ENTRY_LINKS[num].label}
+                          </Link>
+                        )}
                       </span>
                     ))}
                   </div>
@@ -294,12 +305,18 @@ export default function GlossaryPage() {
                     {term.entryRefs.map((num, i) => (
                       <span key={num}>
                         {i > 0 && ", "}
-                        <Link
-                          href={ENTRY_LINKS[num].href}
-                          className="glossary-entry-link"
-                        >
-                          {ENTRY_LINKS[num].label}
-                        </Link>
+                        {COMING_SOON_ENTRIES.has(num) ? (
+                          <span className="glossary-entry-coming">
+                            {ENTRY_LINKS[num].label} (coming soon)
+                          </span>
+                        ) : (
+                          <Link
+                            href={ENTRY_LINKS[num].href}
+                            className="glossary-entry-link"
+                          >
+                            {ENTRY_LINKS[num].label}
+                          </Link>
+                        )}
                       </span>
                     ))}
                   </div>

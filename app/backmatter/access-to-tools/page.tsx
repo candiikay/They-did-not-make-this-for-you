@@ -194,7 +194,7 @@ export default function AccessToToolsPage() {
   const getNextNum = () => ++catalogNum;
 
   return (
-    <Spread className="spread--continuous spread--access-to-tools">
+    <Spread className="spread--continuous spread--entry-style spread--access-to-tools">
       <PageLeft>
         <div className="page-content">
           <header className="wec-header">

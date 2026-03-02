@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function TableOfContentsPage() {
   return (
-    <Spread className="spread--continuous">
+    <Spread className="spread--continuous spread--entry-style">
       <PageLeft>
         <div className="page-content">
           <div className="toc-title">Table of Contents</div>
@@ -52,36 +52,29 @@ export default function TableOfContentsPage() {
                 Entry 04 — Identity as Dataset
               </Link>
             </div>
-            <div className="toc-digression">
+            <div className="toc-digression toc-digression--grouped">
               <Link href="/chapter-01/ch1-reader-as-artifact">
                 Digression — Reader as Artifact
-              </Link>
-            </div>
-            <div className="toc-entry">
-              <Link href="/chapter-01/recommended-reading">
-                Recommended Reading — Chapter 1
               </Link>
             </div>
           </div>
 
           <div className="toc-section">
             <div className="toc-chapter">Chapter 2 — What Does It Know About You?</div>
-            <div className="toc-entry">
-              <Link href="/chapter-02/ch2-entry04-location-tracking">
-                Entry 05 — Location Tracking
-              </Link>
+            <div className="toc-entry toc-entry--coming">
+              Entry 05 — Location Tracking
             </div>
-            <div className="toc-entry">Entry 06 — Smart Home Cameras</div>
-            <div className="toc-entry">Entry 07 — Biometric ID</div>
-            <div className="toc-digression">Digression — Living Inside a Dataset</div>
+            <div className="toc-entry toc-entry--coming">Entry 06 — Smart Home Cameras</div>
+            <div className="toc-entry toc-entry--coming">Entry 07 — Biometric ID</div>
+            <div className="toc-digression toc-digression--grouped">Digression — Living Inside a Dataset</div>
           </div>
 
           <div className="toc-section">
             <div className="toc-chapter">Chapter 3 — What Does It Decide?</div>
-            <div className="toc-entry">Entry 08 — Recommendation Systems</div>
-            <div className="toc-entry">Entry 09 — Search Rankings</div>
-            <div className="toc-entry">Entry 10 — Predictive Scoring</div>
-            <div className="toc-digression">Digression — When Algorithms Learn Taste</div>
+            <div className="toc-entry toc-entry--coming">Entry 08 — Recommendation Systems</div>
+            <div className="toc-entry toc-entry--coming">Entry 09 — Search Rankings</div>
+            <div className="toc-entry toc-entry--coming">Entry 10 — Predictive Scoring</div>
+            <div className="toc-digression toc-digression--grouped">Digression — When Algorithms Learn Taste</div>
           </div>
         </div>
       </PageLeft>
@@ -90,44 +83,46 @@ export default function TableOfContentsPage() {
         <div className="page-content">
           <div className="toc-section">
             <div className="toc-chapter">Chapter 4 — How Did We Get Here?</div>
-            <div className="toc-entry">Entry 11 — Large Language Models</div>
-            <div className="toc-entry">Entry 12 — AI Robotics</div>
-            <div className="toc-entry">Entry 13 — AR/VR Systems</div>
-            <div className="toc-digression">Digression — Every Technology Has a Past</div>
+            <div className="toc-entry toc-entry--coming">Entry 11 — Large Language Models</div>
+            <div className="toc-entry toc-entry--coming">Entry 12 — AI Robotics</div>
+            <div className="toc-entry toc-entry--coming">Entry 13 — AR/VR Systems</div>
+            <div className="toc-digression toc-digression--grouped">Digression — Every Technology Has a Past</div>
           </div>
 
           <div className="toc-section">
             <div className="toc-chapter">
               Chapter 5 — What Does It Cost To Stay Inside The System?
             </div>
-            <div className="toc-entry">Entry 14 — Constant Updates</div>
-            <div className="toc-entry">Entry 15 — Subscription Creep</div>
-            <div className="toc-entry">Entry 16 — Repair Restrictions</div>
-            <div className="toc-digression">Digression — The Cost of Staying Compatible</div>
+            <div className="toc-entry toc-entry--coming">Entry 14 — Constant Updates</div>
+            <div className="toc-entry toc-entry--coming">Entry 15 — Subscription Creep</div>
+            <div className="toc-entry toc-entry--coming">Entry 16 — Repair Restrictions</div>
+            <div className="toc-digression toc-digression--grouped">Digression — The Cost of Staying Compatible</div>
           </div>
 
           <div className="toc-section">
             <div className="toc-chapter">Chapter 6 — What Could It Become?</div>
-            <div className="toc-entry">Entry 17 — Cooperative Platforms</div>
-            <div className="toc-entry">Entry 18 — Humane Tech Design</div>
-            <div className="toc-entry">Entry 19 — Community Infrastructure</div>
-            <div className="toc-digression">Digression — Designing With Care</div>
+            <div className="toc-entry toc-entry--coming">Entry 17 — Cooperative Platforms</div>
+            <div className="toc-entry toc-entry--coming">Entry 18 — Humane Tech Design</div>
+            <div className="toc-entry toc-entry--coming">Entry 19 — Community Infrastructure</div>
+            <div className="toc-digression toc-digression--grouped">Digression — Designing With Care</div>
           </div>
 
           <div className="toc-divider" />
 
-          <div className="toc-frontmatter">Postscript — Still Unfinished</div>
-          <div className="toc-frontmatter">
-            <Link href="/backmatter/glossary">Glossary</Link>
-          </div>
-          <div className="toc-frontmatter">
-            <Link href="/backmatter/index-of-systems">Index of Systems</Link>
-          </div>
-          <div className="toc-frontmatter">
-            <Link href="/backmatter/access-to-tools">Access to Tools (Now)</Link>
-          </div>
-          <div className="toc-frontmatter">
-            <Link href="/backmatter/recommended-reading">Recommended Reading</Link>
+          <div className="toc-backmatter">
+            <div className="toc-backmatter-item toc-backmatter-item--meta">Postscript — Still Unfinished</div>
+            <div className="toc-backmatter-item">
+              <Link href="/backmatter/glossary">Glossary</Link>
+            </div>
+            <div className="toc-backmatter-item">
+              <Link href="/backmatter/index-of-systems">Index of Systems</Link>
+            </div>
+            <div className="toc-backmatter-item">
+              <Link href="/backmatter/access-to-tools">Access to Tools (Now)</Link>
+            </div>
+            <div className="toc-backmatter-item">
+              <Link href="/backmatter/recommended-reading">Recommended Reading</Link>
+            </div>
           </div>
         </div>
 

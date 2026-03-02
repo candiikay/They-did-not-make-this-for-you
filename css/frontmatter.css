@@ -329,3 +329,73 @@
   background: var(--white);
   opacity: 0.3;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE — Reduced padding, scaled typography
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .page-content {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .introduction .page-content {
+    padding: 20px 16px;
+    gap: 14px;
+  }
+
+  .book-title {
+    font-size: 32px;
+  }
+
+  .section-title,
+  .toc-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .highlight-box {
+    padding: 16px;
+    margin: 18px 0;
+  }
+
+  .zine-card,
+  .zine-card-tilt-left,
+  .zine-card-tilt-right {
+    padding: 14px 16px;
+    margin: 16px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-content {
+    padding: 16px 14px;
+    gap: 16px;
+  }
+
+  .introduction .page-content {
+    padding: 14px 12px;
+    gap: 12px;
+  }
+
+  .book-title {
+    font-size: 26px;
+  }
+
+  .section-title,
+  .toc-title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .toc-chapter {
+    font-size: 16px;
+  }
+
+  .toc-entry,
+  .toc-frontmatter {
+    font-size: 10px;
+    margin-left: 12px;
+  }
+}

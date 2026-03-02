@@ -13,10 +13,14 @@ export const ENTRY_SOURCES: Record<string, EntrySource[]> = {
     { title: "Gender Shades", author: "Joy Buolamwini", year: "2018", note: "facial recognition audit" },
     { title: "Atlas of AI", author: "Kate Crawford", year: "2021", note: "classification, default user" },
     { title: "Seeing Like a State", author: "James C. Scott", year: "1998", note: "legibility, measurement" },
+    { title: "Race After Technology", author: "Ruha Benjamin", year: "2019", note: "'New Jim Code,' coded bias" },
+    { title: "Dark Matters", author: "Simone Browne", year: "2015", note: "racializing surveillance" },
+    { title: "Situated Knowledges", author: "Donna Haraway", year: "1988", note: "against the view from nowhere" },
   ],
   "ch1-entry02-mind-as-dataset": [
     { title: "The Design of Everyday Things", author: "Don Norman", year: "1988/2013", note: "affordances, feedback" },
     { title: "The Cybernetic Hypothesis", author: "Tiqqun", year: "2001", note: "feedback loops, control" },
+    { title: "pull-to-refresh", author: "Loren Brichter", year: "2009", note: "interview, design regrets" },
   ],
   "ch1-entry03-behavior-as-dataset": [
     { title: "Seeing Like a State", author: "James C. Scott", year: "1998", note: "scientific management" },
@@ -34,7 +38,8 @@ export const ENTRY_SOURCES: Record<string, EntrySource[]> = {
     { title: "One Nation, Tracked", author: "New York Times", year: "2019", note: "location data scale" },
   ],
   "ch1-reader-as-artifact": [
-    { title: "Atlas of AI", author: "Kate Crawford", year: "2021", note: "constructed datasets" },
-    { title: "The Whole Earth Catalog", author: "Stewart Brand", year: "1968–1972", note: "catalog format" },
+    { title: "Atlas of AI", author: "Kate Crawford", year: "2021", note: "datasets, extraction, who systems are built for" },
+    { title: "The Age of Surveillance Capitalism", author: "Shoshana Zuboff", year: "2019", note: "turning behavior into prediction and control" },
+    { title: "Dark Matters", author: "Simone Browne", year: "2015", note: "the body and identity under surveillance" },
   ],
 };

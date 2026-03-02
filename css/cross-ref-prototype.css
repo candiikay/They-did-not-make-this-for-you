@@ -1,0 +1,465 @@
+/* ═══════════════════════════════════════════════════════════════
+   CROSS-REFERENCE PROTOTYPE — Mindy Seu / Cyberfeminism Index
+   Hierarchy: clear reading order, type scale, section differentiation
+   Scoped to .spread--cross-ref-demo
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Type scale: 12 / 14 / 18 / 24 / 32 / 40 (≈1.25 ratio) */
+
+.spread--cross-ref-demo {
+  position: relative;
+  padding-top: 48px;
+}
+
+/* Prototype banner */
+.prototype-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 24px;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  background: rgba(0, 0, 0, 0.06);
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.prototype-banner a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.prototype-banner a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* ── COLUMN ROLES: Body = primary reading, Artifacts = evidence, Rail = support ── */
+.spread--cross-ref-demo .body {
+  max-width: 52ch; /* Optimal line length for readability, wider to use available space */
+}
+
+.spread--cross-ref-demo .body.explain {
+  gap: 32px; /* Clear breaks between sections */
+}
+
+/* ── Level 1: Entry point — where to start ── */
+.spread--cross-ref-demo .entry-eyebrow {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  opacity: 0.65;
+  margin-bottom: 6px;
+}
+
+.spread--cross-ref-demo .entry-module {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+
+.spread--cross-ref-demo .entry-eyebrow-divider {
+  opacity: 0.5;
+}
+
+.spread--cross-ref-demo .entry-title {
+  font-size: 40px;
+  line-height: 1.05;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.spread--cross-ref-demo .entry-subtitle {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: 0.85;
+}
+
+.spread--cross-ref-demo .explain .entry-header {
+  padding-bottom: 24px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid var(--ink);
+}
+
+/* Blueprint: vertical label column, minimal */
+.spread--cross-ref-demo .body-blueprint__svg {
+  max-width: 280px;
+  aspect-ratio: 240 / 120;
+}
+
+/* ── Level 2: Lead — narrative hook (larger than body) ── */
+.spread--cross-ref-demo .lead {
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+/* ── Level 3: The Rule — thesis (strongest visual weight) ── */
+.spread--cross-ref-demo .rule-block {
+  border: 2px solid var(--ink);
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.spread--cross-ref-demo .rule-title {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+.spread--cross-ref-demo .rule-text {
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.spread--cross-ref-demo .neutral-assumption {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Level 4: Key Idea — main body text ── */
+.spread--cross-ref-demo .key-idea {
+  border: 1px dashed rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+
+.spread--cross-ref-demo .key-idea-label {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+.spread--cross-ref-demo .key-idea p {
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ── Level 5: Pull quote — external voice, visual break ── */
+.spread--cross-ref-demo .pull-quote {
+  border-left: 4px solid var(--ink);
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.spread--cross-ref-demo .pq-quote {
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+.spread--cross-ref-demo .pq-attr {
+  font-size: 11px;
+  opacity: 0.65;
+  margin-top: 10px;
+}
+
+/* ── Level 6: What Next — tertiary, clearly secondary ── */
+.spread--cross-ref-demo .what-next {
+  border: 1px dotted rgba(0, 0, 0, 0.35);
+  padding: 18px;
+}
+
+.spread--cross-ref-demo .what-next-label {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+  opacity: 0.55;
+}
+
+.spread--cross-ref-demo .what-next p,
+.spread--cross-ref-demo .what-next .pattern-chunk {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Pattern chunks: scan-able micro-sections */
+.spread--cross-ref-demo .pattern-chunks {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.spread--cross-ref-demo .pattern-chunk {
+  margin: 0;
+}
+
+.spread--cross-ref-demo .pattern-chunk__head {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: block;
+  margin-bottom: 10px; /* Micro-spacing after bold leads for scan-ability */
+}
+
+.spread--cross-ref-demo .pattern-list {
+  display: block;
+  margin-top: 8px;
+}
+
+/* ── RAIL: Clearly supporting, not competing ── */
+.spread--cross-ref-demo .rail {
+  border-right-style: dashed;
+  opacity: 0.9;
+}
+
+.spread--cross-ref-demo .rail__block {
+  padding-bottom: 24px;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+}
+
+/* Rail: Key Idea — two lines, structural principle */
+.spread--cross-ref-demo .rail__key-idea {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Rail: Quote — external voice, distinct lens */
+.spread--cross-ref-demo .rail__quote {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.spread--cross-ref-demo .rail__quote-text {
+  font-size: 13px;
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0 0 8px 0;
+}
+
+.spread--cross-ref-demo .rail__quote-attr {
+  font-size: 11px;
+  opacity: 0.75;
+  font-style: normal;
+}
+
+.spread--cross-ref-demo .rail__block:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.spread--cross-ref-demo .rail__title {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+/* See also: slightly stronger (prototype focus) */
+.spread--cross-ref-demo .rail__block:last-child .rail__title {
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.spread--cross-ref-demo .rail__list li,
+.spread--cross-ref-demo .rail__cites li {
+  margin-bottom: 6px;
+}
+
+/* ── ARTIFACTS: Evidence column — card hierarchy ── */
+.spread--cross-ref-demo .artifacts__header {
+  margin-bottom: 20px;
+}
+
+.spread--cross-ref-demo .artifacts__header .top-strip,
+.spread--cross-ref-demo .artifacts__header .entry-meta,
+.spread--cross-ref-demo .artifacts__header .origin-header {
+  border-bottom-style: dashed;
+}
+
+.spread--cross-ref-demo .artifacts__header .top-strip {
+  font-size: 10px;
+  opacity: 0.7;
+  padding-bottom: 10px;
+}
+
+.spread--cross-ref-demo .artifacts__header .entry-meta {
+  font-size: 10px;
+  opacity: 0.75;
+}
+
+.spread--cross-ref-demo .artifacts__header .origin-label {
+  font-size: 9px;
+  opacity: 0.6;
+}
+
+.spread--cross-ref-demo .artifacts__header .origin-text {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.spread--cross-ref-demo .artifacts__section-label {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.spread--cross-ref-demo .artifact {
+  border: 1px dashed rgba(0, 0, 0, 0.35);
+  padding: 18px;
+}
+
+.spread--cross-ref-demo .artifact__micro-label {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.spread--cross-ref-demo .artifact__kicker {
+  font-size: 10px;
+  opacity: 0.65;
+}
+
+.spread--cross-ref-demo .artifact__title {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 4px 0 12px 0;
+}
+
+.spread--cross-ref-demo .artifact__rows dt {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.spread--cross-ref-demo .artifact__rows dd {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.spread--cross-ref-demo .artifact__media {
+  border-style: dashed;
+}
+
+.spread--cross-ref-demo .artifact__media figcaption {
+  font-size: 10px;
+  opacity: 0.65;
+}
+
+/* ── Source citations: Mindy Seu index-style ── */
+.spread--cross-ref-demo .cite-ref {
+  font-size: 0.78em;
+  vertical-align: 0.25em;
+  margin-left: 0.15em;
+  opacity: 0.65;
+}
+
+.spread--cross-ref-demo .cite-ref__link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+
+.spread--cross-ref-demo .cite-ref__link:hover {
+  opacity: 1;
+}
+
+/* ── Cross-refs: support, don't compete ── */
+.cross-ref-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.cross-ref-link:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.cross-ref-num {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.8;
+}
+
+.body .cross-ref-link {
+  margin: 0 0.12em;
+  vertical-align: 0.12em;
+}
+
+.body .cross-ref-num {
+  font-size: 0.78em;
+}
+
+.rail__list--cross-ref .cross-ref-link {
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.45;
+  font-size: 12px;
+}
+
+/* ── Nav: visible, matches main nav style ── */
+.spread--cross-ref-demo .nav-footer {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top-style: solid;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  .spread--cross-ref-demo {
+    padding-top: 36px;
+  }
+
+  .prototype-banner {
+    padding: 8px 16px;
+    font-size: 10px;
+  }
+
+  .spread--cross-ref-demo .entry-title {
+    font-size: 32px;
+  }
+
+  .spread--cross-ref-demo .entry-subtitle {
+    font-size: 14px;
+  }
+
+  .spread--cross-ref-demo .lead {
+    font-size: 17px;
+  }
+
+  .spread--cross-ref-demo .rule-text {
+    font-size: 18px;
+  }
+
+  .spread--cross-ref-demo .pq-quote {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .spread--cross-ref-demo {
+    padding-top: 32px;
+  }
+
+  .prototype-banner {
+    padding: 6px 12px;
+    font-size: 9px;
+  }
+
+  .spread--cross-ref-demo .entry-title {
+    font-size: 26px;
+  }
+
+  .spread--cross-ref-demo .rule-block {
+    padding: 18px;
+  }
+
+  .spread--cross-ref-demo .rule-text {
+    font-size: 16px;
+  }
+
+  .spread--cross-ref-demo .key-idea p {
+    font-size: 14px;
+  }
+
+  .spread--cross-ref-demo .pq-quote {
+    font-size: 16px;
+  }
+}

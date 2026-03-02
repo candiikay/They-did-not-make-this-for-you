@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function HowToReadPage() {
   return (
-    <Spread className="spread--continuous">
+    <Spread className="spread--continuous spread--entry-style how-to-read">
       <PageLeft>
         <div className="page-content">
           <div className="section-title">
@@ -36,22 +36,22 @@ export default function HowToReadPage() {
             <div className="label">Left Column</div>
             <div className="content">
               <p>
-                Start here. The left page is your orientation station — it tells
-                you <em>what</em> you&apos;re looking at before diving into{" "}
+                Start here. The left column is your orientation station — it
+                tells you <em>what</em> you&apos;re looking at before diving into{" "}
                 <em>why</em> it matters.
               </p>
               <p>
-                You&apos;ll find: the origin story (where this system came from),
-                the title and subtitle, a big image that shows the system in
-                action, an artifact card (like a museum label), a timeline of key
-                moments, and a context section that explains why this belongs in
-                the catalog.
+                You&apos;ll find: the origin (where this system came from), the
+                entry title and subtitle, and artifact cards — each with an
+                image, a museum-style label (what it does, used for), and a
+                claim vs. reality (what the system promises vs. what actually
+                happens).
               </p>
               <p>
-                <strong>How to navigate:</strong> Skim this first to get your
-                bearings. The image and artifact card give you the quick facts;
-                the timeline shows you it&apos;s not static; the context sets up
-                the questions the entry will explore.
+                <strong>How to navigate:</strong> Skim the origin and artifact
+                cards first to get your bearings. The images and labels give you
+                the quick facts; claim vs. reality sets up the questions the
+                entry will explore.
               </p>
             </div>
           </div>
@@ -60,25 +60,22 @@ export default function HowToReadPage() {
             <div className="label">Right Column</div>
             <div className="content">
               <p>
-                This is where the story unfolds. The main column on the right
-                page does the heavy lifting — it&apos;s the essay part, but
-                broken into digestible pieces.
+                This is where the story unfolds. The right column does the heavy
+                lifting — it&apos;s the essay part, but broken into digestible
+                pieces.
               </p>
               <p>
-                You&apos;ll find: <em>The Rule</em> (one sentence that captures
-                the core pattern), a personal reflection (what it feels like to
-                move through this system), body paragraphs (how it works, who has
-                power, who&apos;s visible or invisible), a <em>Key Idea</em> (the
-                takeaway), <em>What Would a Better Version Look Like?</em> (a
-                provocation, not a blueprint), and a <em>Forward Thread</em> (where
-                this connects to other entries).
+                You&apos;ll find: a blueprint diagram (the same architecture
+                across time), a lead paragraph, <em>The Rule</em> (one sentence
+                that captures the core pattern), body text (how it works, who has
+                power, who&apos;s visible or invisible), and <em>The Pattern</em>{" "}
+                (the takeaway, broken into chunks).
               </p>
               <p>
                 <strong>How to navigate:</strong> Read <em>The Rule</em> and the
-                reflection first — they give you the emotional and conceptual
-                anchor. Then move through the body text at your own pace. The{" "}
-                <em>Key Idea</em> is your souvenir; the <em>Forward Thread</em>{" "}
-                is your next destination.
+                lead first — they give you the conceptual anchor. Then move
+                through the body text at your own pace. <em>The Pattern</em> is
+                your souvenir.
               </p>
             </div>
           </div>
@@ -91,22 +88,17 @@ export default function HowToReadPage() {
                 offering context, connections, and shortcuts.
               </p>
               <p>
-                You&apos;ll find: catalog tags (themes like &quot;surveillance&quot;
-                or &quot;friction&quot; that appear across entries), pull quotes
-                (sentences worth pausing on), and index tags (links to related
-                entries, chapters, or digressions).
+                You&apos;ll find: <strong>Keywords</strong> (themes like
+                &quot;surveillance&quot; or &quot;classification&quot; — some
+                link to the glossary), <strong>Key Idea</strong> (the takeaway in
+                one sentence), a <strong>Quote</strong> (a voice worth pausing
+                on), <strong>Sources</strong> (citations to recommended reading),
+                and <strong>See also</strong> (links to related entries).
               </p>
               <p>
-                <strong>Visit the glossary as you read.</strong> Each entry has a
-                &quot;Visit the glossary&quot; link in the margin. The keywords
-                that appear there link to the glossary — use it to trace how the
-                same pattern appears across body, mind, labor, and identity.
-              </p>
-              <p>
-                <strong>How to navigate:</strong> Use the tags to jump between
-                related entries. Read pull quotes when you want to slow down.
-                Follow index tags when you&apos;re curious about connections.
-                The margin is your permission to read non-linearly — hop around,
+                <strong>How to navigate:</strong> The margin is your shortcut
+                lane. Use keywords to trace patterns across entries. Follow See
+                also when you&apos;re curious about connections — hop around,
                 follow threads, make your own path.
               </p>
             </div>
@@ -118,28 +110,30 @@ export default function HowToReadPage() {
         <div className="page-content">
           <div className="section-label">What This Book Looks Like</div>
           <div className="body-text">
-            <p>
-              <strong>Length:</strong> 60–80 pages
-            </p>
-            <p>
-              <strong>Structure:</strong> 6 chapters + digressions
-            </p>
-            <p>
-              <strong>Entries:</strong> 3–5 per chapter. This first edition
-              includes 18 entries — enough for one semester of work, with room
-              to grow in future versions.
-            </p>
+            <ul className="list">
+              <li>
+                <strong>Length:</strong> 60–80 pages
+              </li>
+              <li>
+                <strong>Structure:</strong> 6 chapters + digressions
+              </li>
+              <li>
+                <strong>Entries:</strong> 3–5 per chapter. This first edition
+                includes 18 entries — enough for one semester of work, with room
+                to grow in future versions.
+              </li>
+            </ul>
             <p>
               <strong>Visual style</strong> inspired by catalog publications:
             </p>
             <ul className="list">
               <li>Annotated images</li>
-              <li>Side notes and references</li>
+              <li>Keywords and sources in the margin</li>
               <li>Index-style layout</li>
-              <li>Cross-referencing between entries</li>
+              <li>Cross-referencing between entries (See also)</li>
               <li>
-                <Link href="/backmatter/glossary">Glossary</Link> — visit as you
-                read to trace the pattern
+                <Link href="/backmatter/glossary">Glossary</Link> — keywords link
+                to definitions
               </li>
             </ul>
           </div>
@@ -160,7 +154,9 @@ export default function HowToReadPage() {
             Three Layers
           </div>
           <div className="body-text">
-            <p>Across every chapter, the catalog looks at:</p>
+            <p>
+              As in the Introduction, the catalog looks at three layers:
+            </p>
             <ul className="list">
               <li>
                 <strong>Personal impact</strong> — how systems shape daily life,
@@ -192,12 +188,11 @@ export default function HowToReadPage() {
             </p>
             <p>
               You do not need to read every paragraph in sequence. One simple
-              path is: skim the left page first — origin, image, artifact card,
-              timeline — to get your bearings; then read <em>The Rule</em>, the
-              personal reflection, and the <em>Key Idea</em> on the right page;
-              then move through the body text wherever your attention catches,
-              using the margin tags and forward threads to jump to related
-              entries.
+              path is: skim the left column first — origin, artifact cards — to
+              get your bearings; then read <em>The Rule</em> and the lead on the
+              right column; then move through the body text wherever your
+              attention catches, using the margin&apos;s Keywords and See also to
+              jump to related entries.
             </p>
             <p>
               The goal is clarity and curiosity — a book that someone interested

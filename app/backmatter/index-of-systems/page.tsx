@@ -483,7 +483,7 @@ export default function IndexOfSystemsPage() {
   const rightSections = sections.slice(Math.ceil(sections.length / 2));
 
   return (
-    <Spread className="spread--continuous spread--index-of-systems">
+    <Spread className="spread--continuous spread--entry-style spread--index-of-systems">
       <PageLeft>
         <div className="page-content">
           <header className="idx-header">

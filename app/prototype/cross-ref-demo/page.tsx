@@ -6,18 +6,25 @@ import { glossaryLink, hasGlossaryEntry } from "@/app/lib/glossary";
 import { ENTRY_SOURCES } from "@/app/lib/entry-sources";
 
 export const metadata = {
-  title: "Entry 01 — The Body as Dataset",
-  description: "They Did Not Make This For You — Entry 01"
+  title: "Prototype — Cross-reference Demo",
+  description: "Test page for numbered cross-reference system"
 };
 
-export default function Entry01Page() {
+export default function CrossRefDemoPage() {
   const sources = ENTRY_SOURCES["ch1-entry01-body-as-dataset"];
 
   return (
     <main
       className="spread spread--entry01 spread--cross-ref-demo"
-      aria-label="Entry 01 — The Body as Dataset"
+      aria-label="Prototype — Cross-reference demo"
     >
+      <div className="prototype-banner" role="status">
+        Prototype — Same design as{" "}
+        <Link href="/chapter-01/ch1-entry01-body-as-dataset">
+          Entry 01
+        </Link>
+      </div>
+
       <div className="spread-grid">
         {/* Column A: Rail — Keywords, Key Idea, Quote, Sources, See also */}
         <aside className="rail" aria-label="Citations and references">
@@ -206,7 +213,7 @@ export default function Entry01Page() {
           <figure className="body-blueprint" aria-label="Same architecture across 139 years">
             <svg viewBox="0 0 240 120" className="body-blueprint__svg" preserveAspectRatio="xMidYMid meet">
               <defs>
-                <marker id="arrowhead-entry01" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                <marker id="arrowhead-prototype" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
                   <polygon points="0 0, 6 3, 0 6" fill="currentColor" />
                 </marker>
               </defs>
@@ -221,8 +228,8 @@ export default function Entry01Page() {
               <text x="70" y="72" fontSize="8" fill="currentColor" fontFamily="IBM Plex Mono, monospace" opacity="0.85">identity</text>
               <text x="70" y="100" fontSize="7" fill="currentColor" fontFamily="IBM Plex Mono, monospace" opacity="0.7">Paris 1879 → Everywhere 2018</text>
               {/* Flow arrows */}
-              <line x1="55" y1="28" x2="55" y2="44" stroke="currentColor" strokeWidth="1" opacity="0.4" markerEnd="url(#arrowhead-entry01)" />
-              <line x1="55" y1="52" x2="55" y2="68" stroke="currentColor" strokeWidth="1" opacity="0.4" markerEnd="url(#arrowhead-entry01)" />
+              <line x1="55" y1="28" x2="55" y2="44" stroke="currentColor" strokeWidth="1" opacity="0.4" markerEnd="url(#arrowhead-prototype)" />
+              <line x1="55" y1="52" x2="55" y2="68" stroke="currentColor" strokeWidth="1" opacity="0.4" markerEnd="url(#arrowhead-prototype)" />
             </svg>
             <figcaption className="body-blueprint__caption">Same architecture. 139 years apart.</figcaption>
           </figure>
@@ -284,8 +291,8 @@ export default function Entry01Page() {
 
           <nav className="nav-footer" aria-label="Entry navigation">
             <span>
-              <Link href="/frontmatter/how-to-read">
-                ← Previous How to Read This Catalog
+              <Link href="/frontmatter/table-of-contents">
+                ← Table of Contents
               </Link>
             </span>
             <span className="tags">

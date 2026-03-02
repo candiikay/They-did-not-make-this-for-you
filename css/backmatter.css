@@ -236,3 +236,61 @@
   letter-spacing: 0.05em;
   color: var(--mid-gray);
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE — Glossary, Index, Reading: reduced spacing
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .glossary-framing {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+
+  .glossary-group {
+    margin-bottom: 22px;
+  }
+
+  .glossary-entry {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+
+  .glossary-term {
+    font-size: 12px;
+  }
+
+  .glossary-def {
+    font-size: 10px;
+  }
+
+  .systems-list,
+  .readings-list {
+    gap: 22px;
+  }
+
+  .system-entry,
+  .reading-entry {
+    padding-bottom: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .glossary-term {
+    font-size: 11px;
+  }
+
+  .glossary-def {
+    font-size: 9px;
+  }
+
+  .system-name,
+  .reading-title {
+    font-size: 11px;
+  }
+
+  .system-desc,
+  .reading-desc {
+    font-size: 9px;
+  }
+}

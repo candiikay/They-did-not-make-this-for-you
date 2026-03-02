@@ -125,7 +125,7 @@ const chapter1Readings = [
 
 export default function Chapter1RecommendedReadingPage() {
   return (
-    <Spread className="spread--continuous">
+    <Spread className="spread--continuous spread--entry-style">
       <PageLeft>
         <div className="page-content">
           <div className="section-title">Recommended Reading</div>
@@ -201,7 +201,7 @@ export default function Chapter1RecommendedReadingPage() {
           <NavFooter
             left={
               <Link href="/chapter-01/ch1-reader-as-artifact">
-                ← Previous Digression — Reader as Artifact
+                ← Previous Digression
               </Link>
             }
             center={
@@ -216,9 +216,7 @@ export default function Chapter1RecommendedReadingPage() {
               </>
             }
             right={
-              <Link href="/chapter-02/ch2-entry04-location-tracking">
-                Next → Entry 05 — Location Tracking
-              </Link>
+              <span className="nav-coming-soon">Next → (coming soon)</span>
             }
           />
         </div>

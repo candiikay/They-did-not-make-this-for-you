@@ -28,7 +28,14 @@
   padding: 0;
 }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
+  width: 100%;
+  overflow-x: hidden;
   background: #777;
   font-family: 'IBM Plex Mono', monospace;
   display: flex;
@@ -44,7 +51,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
-  max-width: var(--page-width);
+  max-width: min(var(--page-width), 100%);
+  min-width: 0; /* allow flex/grid child to shrink below content */
   min-height: 900px;
   background: var(--paper);
   background-image: 

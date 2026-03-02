@@ -15,9 +15,13 @@
 }
 
 .cover {
+  --ink: #111;
+  --paper: #fff;
+  --rule: 1px solid var(--ink);
   position: relative;
   width: 100%;
-  max-width: 1300px;
+  max-width: min(1300px, 100%);
+  min-width: 0;
   background: var(--paper);
   border: 2px solid var(--ink);
   box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.3), 
@@ -180,6 +184,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .cover-container {
+    padding: 24px 16px;
+  }
+
   .cover {
     padding: 60px 40px;
     max-width: 100%;
@@ -207,5 +215,55 @@
     position: static;
     margin-top: 30px;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-container {
+    padding: 16px 12px;
+  }
+
+  .cover {
+    padding: 40px 24px;
+  }
+
+  .title-main {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .title-subtitle {
+    font-size: 11px;
+    margin-top: 12px;
+  }
+
+  .cover-author {
+    font-size: 9px;
+    margin-bottom: 16px;
+  }
+
+  .cover-entry {
+    margin: 28px 0;
+    gap: 10px;
+  }
+
+  .cover-link {
+    font-size: 10px;
+    padding: 10px 20px;
+  }
+
+  .cover-link--secondary {
+    font-size: 8px;
+  }
+
+  .cover-meta {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .meta-item {
+    font-size: 6px;
   }
 }

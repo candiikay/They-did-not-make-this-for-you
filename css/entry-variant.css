@@ -12,24 +12,36 @@
    READER AS ARTIFACT — Special styles for Chapter 1 conclusion
    ═══════════════════════════════════════════════════════════════ */
 
-/* The empty frame where the image should be */
+/* The empty frame where the image should be — matches artifact media structure */
 .img-wrap-empty {
-  border-bottom: 1.5px solid var(--ink);
+  border: var(--rule, 1px solid var(--ink));
   background: var(--paper);
-  min-height: 180px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.img-wrap-empty::before {
-  content: '';
-  position: absolute;
-  inset: 18px;
+.img-wrap-empty__frame {
+  aspect-ratio: 4 / 3;
   border: 1px dashed var(--mid-gray);
+  margin: 14px;
+  flex: 1;
+  min-height: 0;
 }
 
+.img-wrap-empty__caption {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  padding: 10px 14px;
+  border-top: var(--rule, 1px solid var(--ink));
+  text-align: center;
+  margin: 0;
+}
+
+/* Legacy: empty-label when used elsewhere */
 .empty-label {
   font-family: 'Space Mono', monospace;
   font-size: 7px;
@@ -71,28 +83,43 @@
   font-style: italic;
 }
 
-/* The reflection text — bigger, more air */
-.reflection {
-  padding: 20px 18px;
+/* Discretion — author's voice, distinct from The Rule */
+.discretion {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 12px;
   flex: 1;
 }
 
-.reflection p {
+.discretion-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+}
+
+.discretion-body {
+  border-left: 1px solid var(--light-gray);
+  padding-left: calc(var(--grid-unit, 8px) * 2);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.discretion-body p {
   font-family: 'IM Fell English', serif;
   font-size: 13px;
   line-height: 1.8;
   color: var(--ink);
 }
 
-.reflection p em {
+.discretion-body p em {
   font-style: italic;
   font-weight: normal;
 }
 
-.reflection p strong {
+.discretion-body p strong {
   font-weight: normal;
   border-bottom: 1.5px solid var(--ink);
 }
@@ -107,7 +134,7 @@
   flex: 1;
 }
 
-/* Mobile: artifact-card-full and reflection */
+/* Mobile: artifact-card-full and discretion */
 @media (max-width: 900px) {
   .right-body-full {
     padding: 14px 12px;
@@ -128,7 +155,7 @@
     grid-template-columns: 1fr;
   }
 
-  .reflection p {
+  .discretion-body p {
     font-size: 12px;
   }
 }

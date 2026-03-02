@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function PrefacePage() {
   return (
-    <Spread className="spread--continuous">
+    <Spread className="spread--continuous spread--entry-style">
       <PageLeft>
         <div className="page-content">
           <div className="book-title">

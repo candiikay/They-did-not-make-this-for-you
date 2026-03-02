@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function IntroductionPage() {
   return (
-    <Spread className="spread--continuous introduction">
+    <Spread className="spread--continuous spread--entry-style introduction">
       <PageLeft>
         <div className="page-content">
           <div className="section-title">Introduction</div>

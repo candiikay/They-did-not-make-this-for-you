@@ -203,3 +203,36 @@
   aspect-ratio: 16 / 9;
   margin-bottom: 20px;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE — Reduced padding, readable text
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .spread--access-to-tools .page-content {
+    padding: 20px 16px;
+  }
+
+  .spread--access-to-tools .wec-header {
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+  }
+
+  .spread--access-to-tools .wec-title {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .spread--access-to-tools .page-content {
+    padding: 16px 12px;
+  }
+
+  .spread--access-to-tools .wec-system-name {
+    font-size: 11px;
+  }
+
+  .spread--access-to-tools .wec-system-desc {
+    font-size: 9px;
+  }
+}

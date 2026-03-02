@@ -1,0 +1,615 @@
+/* ═══════════════════════════════════════════════════════════════
+   ENTRY-STYLE SHARED — Front matter & back matter match Entry 01
+   Black/white, hard rules, no texture, no tilt
+   ═══════════════════════════════════════════════════════════════ */
+
+.spread--entry-style {
+  --ink: #111;
+  --paper: #fff;
+  --rule: 1px solid var(--ink);
+  --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --body-size: 15px;
+  --label-size: 12px;
+  --title-size: 36px;
+  background: var(--paper) !important;
+  background-image: none !important;
+  border: var(--rule) !important;
+  box-shadow: none !important;
+  color: var(--ink);
+}
+
+.spread--entry-style::before {
+  display: none !important;
+}
+
+/* Page columns */
+.spread--entry-style .page-left {
+  border-right: var(--rule) !important;
+}
+
+/* Page content */
+.spread--entry-style .page-content {
+  padding: 32px 40px;
+}
+
+/* How to Read — match original frontmatter margins (40px 50px) */
+.spread--entry-style.how-to-read .page-content {
+  padding: 40px 50px;
+}
+
+/* ── NAV FOOTER (button-like, accessible) ── */
+.spread--entry-style .nav-footer {
+  border-top: var(--rule) !important;
+  padding: 16px 40px;
+  margin-top: 24px;
+  background: transparent;
+}
+
+.spread--entry-style .nav-footer > span:first-child a,
+.spread--entry-style .nav-footer > span:last-child a {
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+}
+
+.spread--entry-style .nav-footer > span:first-child a:hover,
+.spread--entry-style .nav-footer > span:last-child a:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.spread--entry-style .nav-footer .tags {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+}
+
+.spread--entry-style .nav-footer .contents-link {
+  color: var(--ink);
+  border-color: var(--ink);
+  opacity: 0.9;
+}
+
+.spread--entry-style .nav-footer .contents-link:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* ── TYPOGRAPHY ── */
+.spread--entry-style .book-title,
+.spread--entry-style .section-title,
+.spread--entry-style .toc-title {
+  font-family: 'IM Fell English', serif;
+  font-size: var(--title-size);
+  line-height: 1.1;
+  color: var(--ink);
+  font-weight: normal;
+  transform: none;
+}
+
+.spread--entry-style .book-subtitle {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-style: italic;
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+.spread--entry-style .author {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.8;
+}
+
+.spread--entry-style .section-label,
+.spread--entry-style .block-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.spread--entry-style .section-label::after {
+  background: var(--ink);
+  opacity: 0.5;
+}
+
+/* Body text — larger, Entry 01 scale */
+.spread--entry-style .body-text {
+  font-family: var(--mono);
+  font-size: var(--body-size);
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.spread--entry-style .body-text p {
+  margin-bottom: 18px;
+}
+
+/* ── ZINE CARDS → flat artifact style ── */
+.spread--entry-style .zine-card,
+.spread--entry-style .zine-card-tilt-left,
+.spread--entry-style .zine-card-tilt-right,
+.spread--entry-style .glossary-how-to-use.zine-card {
+  background: var(--paper);
+  border: var(--rule) !important;
+  padding: 18px 22px;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.spread--entry-style .zine-card::before {
+  display: none;
+}
+
+.spread--entry-style .zine-card .label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.spread--entry-style .zine-card .content {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* ── PULL QUOTE ── */
+.spread--entry-style .pull-quote {
+  font-family: 'IM Fell English', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  font-style: italic;
+  border-left: 4px solid var(--ink);
+  padding-left: 16px;
+  margin: 20px 0;
+  transform: none;
+}
+
+.spread--entry-style .pull-quote::after {
+  display: none;
+}
+
+/* ── TABLE OF CONTENTS ── */
+.spread--entry-style .toc-chapter {
+  font-family: 'IM Fell English', serif;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.spread--entry-style .toc-entry,
+.spread--entry-style .toc-frontmatter {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.spread--entry-style .toc-entry a,
+.spread--entry-style .toc-frontmatter a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+}
+
+.spread--entry-style .toc-entry a:hover,
+.spread--entry-style .toc-frontmatter a:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.spread--entry-style .toc-digression {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-style: italic;
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+/* Digressions: visually grouped, separated from entries */
+.spread--entry-style .toc-digression--grouped {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px dotted var(--ink);
+  opacity: 0.9;
+}
+
+/* Future entries: muted, clearly "coming soon" */
+.spread--entry-style .toc-entry--coming {
+  color: var(--dark-gray);
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Backmatter: grouped section (Postscript, Glossary, Index, etc.) */
+.spread--entry-style .toc-backmatter {
+  margin-top: 4px;
+}
+
+.spread--entry-style .toc-backmatter-item {
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.spread--entry-style .toc-backmatter-item a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+}
+
+.spread--entry-style .toc-backmatter-item a:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.spread--entry-style .toc-backmatter-item--meta {
+  font-style: italic;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.spread--entry-style .toc-divider {
+  border-top: var(--rule);
+}
+
+.spread--entry-style .toc-divider::before {
+  color: var(--ink);
+  opacity: 0.7;
+}
+
+/* ── LISTS ── */
+.spread--entry-style .list {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* ── GLOSSARY ── */
+.spread--entry-style .glossary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.spread--entry-style .glossary-date {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.spread--entry-style .glossary-framing {
+  font-family: var(--mono);
+  font-size: var(--body-size);
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.spread--entry-style .glossary-group-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: var(--rule);
+}
+
+.spread--entry-style .glossary-entry {
+  border-bottom: 1px dotted var(--ink);
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+.spread--entry-style .glossary-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.spread--entry-style .glossary-meta-label {
+  color: var(--ink);
+}
+
+.spread--entry-style .glossary-entry-links {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  margin-top: 10px;
+  color: var(--ink);
+}
+
+.spread--entry-style .glossary-term {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+
+.spread--entry-style .glossary-def,
+.spread--entry-style .glossary-when,
+.spread--entry-style .glossary-who,
+.spread--entry-style .glossary-connects {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.spread--entry-style .glossary-entry-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+}
+
+.spread--entry-style .glossary-entry-link:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.spread--entry-style .glossary-entry-coming {
+  color: var(--ink);
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* ── INDEX OF SYSTEMS ── */
+.spread--entry-style .idx-header {
+  border-bottom: var(--rule);
+}
+
+.spread--entry-style .idx-title {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+}
+
+.spread--entry-style .idx-intro,
+.spread--entry-style .idx-note {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.spread--entry-style .idx-section-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  border-bottom: var(--rule);
+}
+
+.spread--entry-style .idx-system-entry {
+  border-bottom: 1px dotted var(--ink);
+}
+
+.spread--entry-style .idx-system-name {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+}
+
+.spread--entry-style .idx-system-name:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.spread--entry-style .idx-system-meta,
+.spread--entry-style .idx-system-desc,
+.spread--entry-style .idx-system-example {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  color: var(--ink);
+}
+
+.spread--entry-style .idx-how-to-use {
+  background: transparent;
+  border: var(--rule);
+}
+
+.spread--entry-style .idx-how-to-use-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+.spread--entry-style .idx-how-to-use-text {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  color: var(--ink);
+}
+
+.spread--entry-style .idx-image-placeholder {
+  background: transparent;
+  border: var(--rule);
+}
+
+/* ── ACCESS TO TOOLS ── */
+.spread--entry-style .wec-header {
+  border-bottom: var(--rule);
+}
+
+.spread--entry-style .wec-title {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+}
+
+.spread--entry-style .wec-label,
+.spread--entry-style .wec-section-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+.spread--entry-style .wec-section-title {
+  border-bottom: var(--rule);
+}
+
+.spread--entry-style .wec-text,
+.spread--entry-style .wec-system-desc,
+.spread--entry-style .wec-system-example {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  color: var(--ink);
+}
+
+.spread--entry-style .wec-system-entry {
+  background: var(--paper);
+  border: var(--rule);
+  border-left: 4px solid var(--ink);
+}
+
+.spread--entry-style .wec-system-name {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  color: var(--ink);
+}
+
+.spread--entry-style .wec-how-to-use {
+  background: transparent;
+  border: var(--rule);
+}
+
+.spread--entry-style .wec-system-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+}
+
+.spread--entry-style .wec-system-link:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.spread--entry-style .at-image-placeholder {
+  background: transparent;
+  border: var(--rule);
+}
+
+/* ── RECOMMENDED READING ── */
+.spread--entry-style .reading-title {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.spread--entry-style .reading-meta,
+.spread--entry-style .reading-desc,
+.spread--entry-style .reading-why,
+.spread--entry-style .reading-example,
+.spread--entry-style .reading-connects {
+  font-family: var(--mono);
+  font-size: var(--label-size);
+  color: var(--ink);
+}
+
+.spread--entry-style .reading-entry {
+  border-bottom: 1px dotted var(--ink);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.spread--entry-style .reading-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.spread--entry-style .reading-connects {
+  color: var(--ink);
+  opacity: 0.85;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE — Entry-style spreads: reduced padding, scaled typography
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .spread--entry-style .page-content {
+    padding: 24px 20px;
+  }
+
+  .spread--entry-style.how-to-read .page-content {
+    padding: 28px 20px;
+  }
+
+  .spread--entry-style .nav-footer {
+    padding: 12px 20px;
+    margin-top: 16px;
+  }
+
+  .spread--entry-style .book-title,
+  .spread--entry-style .section-title,
+  .spread--entry-style .toc-title {
+    font-size: 28px;
+  }
+
+  .spread--entry-style .body-text {
+    font-size: 14px;
+  }
+
+  .spread--entry-style .toc-chapter {
+    font-size: 16px;
+  }
+
+  .spread--entry-style .toc-entry,
+  .spread--entry-style .toc-frontmatter,
+  .spread--entry-style .toc-backmatter-item {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .spread--entry-style .page-content {
+    padding: 16px 14px;
+  }
+
+  .spread--entry-style.how-to-read .page-content {
+    padding: 20px 14px;
+  }
+
+  .spread--entry-style .nav-footer {
+    padding: 12px 14px;
+  }
+
+  .spread--entry-style .book-title,
+  .spread--entry-style .section-title,
+  .spread--entry-style .toc-title {
+    font-size: 24px;
+  }
+
+  .spread--entry-style .body-text {
+    font-size: 13px;
+  }
+
+  .spread--entry-style .zine-card .content {
+    font-size: 11px;
+  }
+
+  .spread--entry-style .pull-quote {
+    font-size: 14px;
+    padding-left: 12px;
+  }
+}

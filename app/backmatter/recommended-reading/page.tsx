@@ -23,7 +23,33 @@ const readings = [
       "Crawford's framework — that datasets are constructed, not neutral — is central to this catalog. She traces how AI inherits the assumptions of its makers.",
     example:
       "Look for \"Datasets are not neutral. They are constructed. They reflect the values, priorities, and blind spots of their creators.\" — quoted in Entry 01. Follow her chapter on classification and the history of the \"default user.\"",
-    connectsTo: ["Entry 01 — Body as Dataset", "Entry 04 — Identity as Dataset"]
+    connectsTo: ["Entry 01 — Body as Dataset", "Entry 04 — Identity as Dataset", "Digression"]
+  },
+  {
+    title: "The Age of Surveillance Capitalism",
+    author: "Shoshana Zuboff",
+    year: "2019",
+    type: "Book",
+    description:
+      "How behavioral surplus — the data extracted from your actions — is turned into prediction products that shape and control future behavior.",
+    whyRead:
+      "Zuboff names the logic: your behavior is the raw material. The product is prediction. The goal is certainty about what you will do next.",
+    example:
+      "Trace the concept of \"behavioral surplus\" — data that exceeds what is needed for the service you think you're using. See how it maps onto the four entries: body, mind, labor, identity.",
+    connectsTo: ["Entry 02 — Mind as Dataset", "Entry 03 — Behavior as Dataset", "Digression"]
+  },
+  {
+    title: "Dark Matters",
+    author: "Simone Browne",
+    year: "2015",
+    type: "Book",
+    description:
+      "On surveillance and the racialized body — from the slave ship to the passport to the biometric border.",
+    whyRead:
+      "Browne shows that surveillance has always been about who counts as a person and who gets to be in the room. \"You were not in the room\" has a long history.",
+    example:
+      "Read the chapter on the passport and the \"book of Negroes.\" See how legibility and classification have always been tools of exclusion. Essential for understanding who systems are built for.",
+    connectsTo: ["Entry 01 — Body as Dataset", "Entry 04 — Identity as Dataset", "Digression"]
   },
   {
     title: "Gender Shades",
@@ -173,7 +199,7 @@ const readings = [
 
 export default function RecommendedReadingPage() {
   return (
-    <Spread className="spread--continuous">
+    <Spread className="spread--continuous spread--entry-style">
       <PageLeft>
         <div className="page-content">
           <div className="section-title">Recommended Reading</div>
@@ -182,6 +208,11 @@ export default function RecommendedReadingPage() {
               Sources that deepen the themes in this catalog. Each entry includes
               why it matters, what to look for, and how it connects to specific
               entries — so you can dig deeper.
+            </p>
+            <p>
+              <Link href="/chapter-01/recommended-reading">
+                Chapter 1 — expanded sources with &quot;why read&quot; and examples →
+              </Link>
             </p>
           </div>
 

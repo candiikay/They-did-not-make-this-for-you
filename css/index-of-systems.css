@@ -7,6 +7,18 @@
   padding: calc(var(--grid-unit) * 2.5) calc(var(--grid-unit) * 3);
 }
 
+/* Right column: flex layout so NavFooter sticks to bottom */
+.spread--index-of-systems .page-right .page-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.spread--index-of-systems .page-right .nav-footer {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
 /* ── HEADER: Softer, less catalog-like ── */
 .idx-header {
   margin-bottom: 28px;
@@ -181,4 +193,42 @@
 .idx-image-placeholder--wide {
   aspect-ratio: 16 / 9;
   margin-bottom: 20px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE — Reduced padding, readable text
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .spread--index-of-systems .page-content {
+    padding: 20px 16px;
+  }
+
+  .idx-header {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+  }
+
+  .idx-title {
+    font-size: 11px;
+  }
+
+  .idx-intro,
+  .idx-note {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 600px) {
+  .spread--index-of-systems .page-content {
+    padding: 16px 12px;
+  }
+
+  .idx-system-name {
+    font-size: 11px;
+  }
+
+  .idx-system-desc {
+    font-size: 9px;
+  }
 }
