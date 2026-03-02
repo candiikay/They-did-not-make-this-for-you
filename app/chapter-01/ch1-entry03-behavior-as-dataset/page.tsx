@@ -320,22 +320,6 @@ export default function Entry03Page() {
               doesn&apos;t clock out.
             </p>
 
-            <section className="rule-block">
-              <h2 className="rule-title">What Would a Better Version Look Like?</h2>
-              <p className="rule-text">
-                What if labor metrics included fatigue, recovery, and the work
-                that doesn&apos;t show up in the dashboard? What if workers
-                designed the measurements — and could contest them? What if
-                productivity was optimized for the body&apos;s limits, not against them?
-              </p>
-            </section>
-
-            <p className="neutral-assumption">
-              The system tracks what it can measure. The question is: what work
-              gets left out? Entry 04 asks what happens when behavior data
-              hardens into a permanent record — when how you acted becomes who you
-              are allowed to be.
-            </p>
           </div>
 
           <nav className="nav-footer" aria-label="Entry navigation">
