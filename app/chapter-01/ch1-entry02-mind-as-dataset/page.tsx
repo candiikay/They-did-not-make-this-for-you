@@ -278,23 +278,6 @@ export default function Entry02Page() {
               attention. The box got bigger. <em>The lever is now in your pocket.</em>
             </p>
 
-            <section className="rule-block">
-              <h2 className="rule-title">What Would a Better Version Look Like?</h2>
-              <p className="rule-text">
-                What if feeds were designed for wellbeing instead of engagement —
-                and platforms were measured by how easy they were to put down?
-                What if the most compulsive users were centered, not the most
-                profitable ones? What if the variable reward schedule had to be
-                disclosed, like a warning label?
-              </p>
-            </section>
-
-            <p className="neutral-assumption">
-              Nobody agreed to be inside the experiment. The experiment was
-              designed to feel like a choice. Entry 03 asks what happens when
-              labor becomes measurable — when the body becomes the variable being
-              optimized.
-            </p>
           </div>
 
           <nav className="nav-footer" aria-label="Entry navigation">
